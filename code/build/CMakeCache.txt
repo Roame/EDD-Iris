@@ -15,10 +15,10 @@
 ########################
 
 //Path to a program.
-CMAKE_ADDR2LINE:FILEPATH=/usr/bin/addr2line
+CMAKE_ADDR2LINE:FILEPATH=/home/roame/Documents/Personal/Iris/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/bin/arm-linux-gnueabihf-addr2line
 
 //Path to a program.
-CMAKE_AR:FILEPATH=/usr/bin/ar
+CMAKE_AR:FILEPATH=/home/roame/Documents/Personal/Iris/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/bin/arm-linux-gnueabihf-ar
 
 //Choose the type of build, options are: None Debug Release RelWithDebInfo
 // MinSizeRel ...
@@ -39,16 +39,16 @@ CMAKE_CXX_COMPILER_RANLIB:FILEPATH=/home/roame/Documents/Personal/Iris/tools/rpi
 CMAKE_CXX_FLAGS:STRING=
 
 //Flags used by the CXX compiler during DEBUG builds.
-CMAKE_CXX_FLAGS_DEBUG:STRING=
+CMAKE_CXX_FLAGS_DEBUG:STRING=-g
 
 //Flags used by the CXX compiler during MINSIZEREL builds.
-CMAKE_CXX_FLAGS_MINSIZEREL:STRING=
+CMAKE_CXX_FLAGS_MINSIZEREL:STRING=-Os -DNDEBUG
 
 //Flags used by the CXX compiler during RELEASE builds.
-CMAKE_CXX_FLAGS_RELEASE:STRING=
+CMAKE_CXX_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 
 //Flags used by the CXX compiler during RELWITHDEBINFO builds.
-CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=
+CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
@@ -62,16 +62,16 @@ CMAKE_C_COMPILER_RANLIB:FILEPATH=/home/roame/Documents/Personal/Iris/tools/rpi-t
 CMAKE_C_FLAGS:STRING=
 
 //Flags used by the C compiler during DEBUG builds.
-CMAKE_C_FLAGS_DEBUG:STRING=
+CMAKE_C_FLAGS_DEBUG:STRING=-g
 
 //Flags used by the C compiler during MINSIZEREL builds.
-CMAKE_C_FLAGS_MINSIZEREL:STRING=
+CMAKE_C_FLAGS_MINSIZEREL:STRING=-Os -DNDEBUG
 
 //Flags used by the C compiler during RELEASE builds.
-CMAKE_C_FLAGS_RELEASE:STRING=
+CMAKE_C_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 
 //Flags used by the C compiler during RELWITHDEBINFO builds.
-CMAKE_C_FLAGS_RELWITHDEBINFO:STRING=
+CMAKE_C_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
 //Path to a program.
 CMAKE_DLLTOOL:FILEPATH=CMAKE_DLLTOOL-NOTFOUND
@@ -98,7 +98,7 @@ CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=OFF
 CMAKE_INSTALL_PREFIX:PATH=/usr/local
 
 //Path to a program.
-CMAKE_LINKER:FILEPATH=/usr/bin/ld
+CMAKE_LINKER:FILEPATH=/home/roame/Documents/Personal/Iris/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/bin/arm-linux-gnueabihf-ld
 
 //Path to a program.
 CMAKE_MAKE_PROGRAM:FILEPATH=/usr/bin/make
@@ -124,13 +124,13 @@ CMAKE_MODULE_LINKER_FLAGS_RELEASE:STRING=
 CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 
 //Path to a program.
-CMAKE_NM:FILEPATH=/usr/bin/nm
+CMAKE_NM:FILEPATH=/home/roame/Documents/Personal/Iris/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/bin/arm-linux-gnueabihf-nm
 
 //Path to a program.
-CMAKE_OBJCOPY:FILEPATH=/usr/bin/objcopy
+CMAKE_OBJCOPY:FILEPATH=/home/roame/Documents/Personal/Iris/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/bin/arm-linux-gnueabihf-objcopy
 
 //Path to a program.
-CMAKE_OBJDUMP:FILEPATH=/usr/bin/objdump
+CMAKE_OBJDUMP:FILEPATH=/home/roame/Documents/Personal/Iris/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/bin/arm-linux-gnueabihf-objdump
 
 //Value Computed by CMake
 CMAKE_PROJECT_DESCRIPTION:STATIC=
@@ -142,10 +142,10 @@ CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 CMAKE_PROJECT_NAME:STATIC=Iris
 
 //Path to a program.
-CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
+CMAKE_RANLIB:FILEPATH=/home/roame/Documents/Personal/Iris/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/bin/arm-linux-gnueabihf-ranlib
 
 //Path to a program.
-CMAKE_READELF:FILEPATH=/usr/bin/readelf
+CMAKE_READELF:FILEPATH=/home/roame/Documents/Personal/Iris/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/bin/arm-linux-gnueabihf-readelf
 
 //Flags used by the linker during the creation of shared libraries
 // during all build types.
@@ -195,10 +195,10 @@ CMAKE_STATIC_LINKER_FLAGS_RELEASE:STRING=
 CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 
 //Path to a program.
-CMAKE_STRIP:FILEPATH=/usr/bin/strip
+CMAKE_STRIP:FILEPATH=/home/roame/Documents/Personal/Iris/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/bin/arm-linux-gnueabihf-strip
 
-//No help, variable specified on the command line.
-CMAKE_TOOLCHAIN_FILE:UNINITIALIZED=../Toolchain-rpi.cmake
+//The CMake toolchain file
+CMAKE_TOOLCHAIN_FILE:FILEPATH=/home/roame/Documents/Personal/Iris/code/Toolchain-rpi.cmake
 
 //If this value is on, makefiles will be generated without the
 // .SILENT directive, and all commands will be echoed to the console
@@ -270,7 +270,7 @@ CMAKE_DLLTOOL-ADVANCED:INTERNAL=1
 //Path to cache edit program executable.
 CMAKE_EDIT_COMMAND:INTERNAL=/usr/bin/cmake-gui
 //Executable file format
-CMAKE_EXECUTABLE_FORMAT:INTERNAL=Unknown
+CMAKE_EXECUTABLE_FORMAT:INTERNAL=ELF
 //ADVANCED property for variable: CMAKE_EXE_LINKER_FLAGS
 CMAKE_EXE_LINKER_FLAGS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_EXE_LINKER_FLAGS_DEBUG

@@ -19,11 +19,11 @@ set(CMAKE_CXX_SIMULATE_VERSION "")
 
 
 
-set(CMAKE_AR "/usr/bin/ar")
+set(CMAKE_AR "/home/roame/Documents/Personal/Iris/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/bin/arm-linux-gnueabihf-ar")
 set(CMAKE_CXX_COMPILER_AR "/home/roame/Documents/Personal/Iris/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc-ar")
-set(CMAKE_RANLIB "/usr/bin/ranlib")
+set(CMAKE_RANLIB "/home/roame/Documents/Personal/Iris/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/bin/arm-linux-gnueabihf-ranlib")
 set(CMAKE_CXX_COMPILER_RANLIB "/home/roame/Documents/Personal/Iris/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc-ranlib")
-set(CMAKE_LINKER "/usr/bin/ld")
+set(CMAKE_LINKER "/home/roame/Documents/Personal/Iris/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/bin/arm-linux-gnueabihf-ld")
 set(CMAKE_MT "")
 set(CMAKE_COMPILER_IS_GNUCXX 1)
 set(CMAKE_CXX_COMPILER_LOADED 1)
