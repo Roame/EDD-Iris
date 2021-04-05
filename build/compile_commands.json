@@ -1,7 +1,0 @@
-[
-{
-  "directory": "/home/roame/Documents/Personal/Iris/build",
-  "command": "/home/roame/Documents/Personal/Iris/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/bin/arm-linux-gnueabihf-g++    -g   -o CMakeFiles/Iris.dir/src/main.cpp.o -c /home/roame/Documents/Personal/Iris/code/src/main.cpp",
-  "file": "/home/roame/Documents/Personal/Iris/code/src/main.cpp"
-}
-]

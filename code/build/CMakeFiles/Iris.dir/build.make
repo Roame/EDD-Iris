@@ -60,15 +60,15 @@ include CMakeFiles/Iris.dir/flags.make
 CMakeFiles/Iris.dir/src/main.cpp.o: CMakeFiles/Iris.dir/flags.make
 CMakeFiles/Iris.dir/src/main.cpp.o: ../src/main.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/roame/Documents/Personal/Iris/code/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Iris.dir/src/main.cpp.o"
-	/home/roame/Documents/Personal/Iris/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/bin/arm-linux-gnueabihf-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Iris.dir/src/main.cpp.o -c /home/roame/Documents/Personal/Iris/code/src/main.cpp
+	/home/roame/Documents/Personal/Iris/code/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/bin/arm-linux-gnueabihf-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Iris.dir/src/main.cpp.o -c /home/roame/Documents/Personal/Iris/code/src/main.cpp
 
 CMakeFiles/Iris.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Iris.dir/src/main.cpp.i"
-	/home/roame/Documents/Personal/Iris/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/bin/arm-linux-gnueabihf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/roame/Documents/Personal/Iris/code/src/main.cpp > CMakeFiles/Iris.dir/src/main.cpp.i
+	/home/roame/Documents/Personal/Iris/code/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/bin/arm-linux-gnueabihf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/roame/Documents/Personal/Iris/code/src/main.cpp > CMakeFiles/Iris.dir/src/main.cpp.i
 
 CMakeFiles/Iris.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Iris.dir/src/main.cpp.s"
-	/home/roame/Documents/Personal/Iris/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/bin/arm-linux-gnueabihf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/roame/Documents/Personal/Iris/code/src/main.cpp -o CMakeFiles/Iris.dir/src/main.cpp.s
+	/home/roame/Documents/Personal/Iris/code/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/bin/arm-linux-gnueabihf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/roame/Documents/Personal/Iris/code/src/main.cpp -o CMakeFiles/Iris.dir/src/main.cpp.s
 
 # Object files for target Iris
 Iris_OBJECTS = \

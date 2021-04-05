@@ -1,3 +1,0 @@
-/home/roame/Documents/Personal/Iris/build/CMakeFiles/rebuild_cache.dir
-/home/roame/Documents/Personal/Iris/build/CMakeFiles/edit_cache.dir
-/home/roame/Documents/Personal/Iris/build/CMakeFiles/Iris.dir

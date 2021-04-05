@@ -7,6 +7,24 @@
 #IncludeRegexTransform: 
 
 /home/roame/Documents/Personal/Iris/code/src/main.cpp
+errno.h
+-
+fcntl.h
+-
+linux/videodev2.h
+-
+stdint.h
+-
+stdio.h
+-
+string.h
+-
+sys/ioctl.h
+-
+sys/mman.h
+-
+unistd.h
+-
 iostream
 -
 
