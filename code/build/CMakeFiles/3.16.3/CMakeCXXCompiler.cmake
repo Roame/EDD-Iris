@@ -1,4 +1,4 @@
-set(CMAKE_CXX_COMPILER "/home/roame/Documents/Personal/Iris/code/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/bin/arm-linux-gnueabihf-g++")
+set(CMAKE_CXX_COMPILER "/home/roame/Documents/Programming/EDD-Iris/code/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/bin/arm-linux-gnueabihf-g++")
 set(CMAKE_CXX_COMPILER_ARG1 "")
 set(CMAKE_CXX_COMPILER_ID "GNU")
 set(CMAKE_CXX_COMPILER_VERSION "4.9.3")
@@ -19,11 +19,11 @@ set(CMAKE_CXX_SIMULATE_VERSION "")
 
 
 
-set(CMAKE_AR "/home/roame/Documents/Personal/Iris/code/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/bin/arm-linux-gnueabihf-ar")
-set(CMAKE_CXX_COMPILER_AR "/home/roame/Documents/Personal/Iris/code/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc-ar")
-set(CMAKE_RANLIB "/home/roame/Documents/Personal/Iris/code/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/bin/arm-linux-gnueabihf-ranlib")
-set(CMAKE_CXX_COMPILER_RANLIB "/home/roame/Documents/Personal/Iris/code/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc-ranlib")
-set(CMAKE_LINKER "/home/roame/Documents/Personal/Iris/code/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/bin/arm-linux-gnueabihf-ld")
+set(CMAKE_AR "/home/roame/Documents/Programming/EDD-Iris/code/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/bin/arm-linux-gnueabihf-ar")
+set(CMAKE_CXX_COMPILER_AR "/home/roame/Documents/Programming/EDD-Iris/code/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc-ar")
+set(CMAKE_RANLIB "/home/roame/Documents/Programming/EDD-Iris/code/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/bin/arm-linux-gnueabihf-ranlib")
+set(CMAKE_CXX_COMPILER_RANLIB "/home/roame/Documents/Programming/EDD-Iris/code/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc-ranlib")
+set(CMAKE_LINKER "/home/roame/Documents/Programming/EDD-Iris/code/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/bin/arm-linux-gnueabihf-ld")
 set(CMAKE_MT "")
 set(CMAKE_COMPILER_IS_GNUCXX 1)
 set(CMAKE_CXX_COMPILER_LOADED 1)
@@ -82,7 +82,7 @@ endif()
 
 
 
-set(CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES "/home/roame/Documents/Personal/Iris/code/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/arm-linux-gnueabihf/include/c++/4.9.3;/home/roame/Documents/Personal/Iris/code/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/arm-linux-gnueabihf/include/c++/4.9.3/arm-linux-gnueabihf;/home/roame/Documents/Personal/Iris/code/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/arm-linux-gnueabihf/include/c++/4.9.3/backward;/home/roame/Documents/Personal/Iris/code/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/lib/gcc/arm-linux-gnueabihf/4.9.3/include;/home/roame/Documents/Personal/Iris/code/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/lib/gcc/arm-linux-gnueabihf/4.9.3/include-fixed;/home/roame/Documents/Personal/Iris/code/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/arm-linux-gnueabihf/include;/home/roame/Documents/Personal/Iris/code/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/arm-linux-gnueabihf/sysroot/usr/include")
+set(CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES "/home/roame/Documents/Programming/EDD-Iris/code/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/arm-linux-gnueabihf/include/c++/4.9.3;/home/roame/Documents/Programming/EDD-Iris/code/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/arm-linux-gnueabihf/include/c++/4.9.3/arm-linux-gnueabihf;/home/roame/Documents/Programming/EDD-Iris/code/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/arm-linux-gnueabihf/include/c++/4.9.3/backward;/home/roame/Documents/Programming/EDD-Iris/code/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/lib/gcc/arm-linux-gnueabihf/4.9.3/include;/home/roame/Documents/Programming/EDD-Iris/code/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/lib/gcc/arm-linux-gnueabihf/4.9.3/include-fixed;/home/roame/Documents/Programming/EDD-Iris/code/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/arm-linux-gnueabihf/include;/home/roame/Documents/Programming/EDD-Iris/code/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/arm-linux-gnueabihf/sysroot/usr/include")
 set(CMAKE_CXX_IMPLICIT_LINK_LIBRARIES "stdc++;m;gcc_s;gcc;c;gcc_s;gcc")
-set(CMAKE_CXX_IMPLICIT_LINK_DIRECTORIES "/home/roame/Documents/Personal/Iris/code/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/lib/gcc/arm-linux-gnueabihf/4.9.3;/home/roame/Documents/Personal/Iris/code/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/lib/gcc;/home/roame/Documents/Personal/Iris/code/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/arm-linux-gnueabihf/lib;/home/roame/Documents/Personal/Iris/code/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/arm-linux-gnueabihf/sysroot/lib;/home/roame/Documents/Personal/Iris/code/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/arm-linux-gnueabihf/sysroot/usr/lib")
+set(CMAKE_CXX_IMPLICIT_LINK_DIRECTORIES "/home/roame/Documents/Programming/EDD-Iris/code/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/lib/gcc/arm-linux-gnueabihf/4.9.3;/home/roame/Documents/Programming/EDD-Iris/code/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/lib/gcc;/home/roame/Documents/Programming/EDD-Iris/code/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/arm-linux-gnueabihf/lib;/home/roame/Documents/Programming/EDD-Iris/code/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/arm-linux-gnueabihf/sysroot/lib;/home/roame/Documents/Programming/EDD-Iris/code/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/arm-linux-gnueabihf/sysroot/usr/lib")
 set(CMAKE_CXX_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")

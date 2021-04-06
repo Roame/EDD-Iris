@@ -6,25 +6,35 @@
 
 #IncludeRegexTransform: 
 
-/home/roame/Documents/Personal/Iris/code/src/main.cpp
-errno.h
--
-fcntl.h
--
-linux/videodev2.h
--
-stdint.h
+/home/roame/Documents/Programming/EDD-Iris/code/src/main.cpp
+iostream
 -
 stdio.h
 -
-string.h
+stdlib.h
+-
+linux/ioctl.h
+-
+linux/types.h
+-
+linux/v4l2-common.h
+-
+linux/v4l2-controls.h
+-
+linux/videodev2.h
+-
+fcntl.h
+-
+unistd.h
 -
 sys/ioctl.h
 -
 sys/mman.h
 -
-unistd.h
+string.h
 -
-iostream
+fstream
+-
+string
 -
 
