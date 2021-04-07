@@ -10,7 +10,7 @@ DIRS="$(ssh $USER@$IP "ls -A ~/Iris")"
 
 if [ -n "$DIRS" ]
 then 
-echo "Resetting Directories"
+echo "Resetting directories"
 ssh $USER@$IP \
 "
 rm -r ~/Iris/*
