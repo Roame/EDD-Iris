@@ -1,15 +1,17 @@
 var timer;
-var toggle = false;
+var count = 0;
 
 function startImageFeed(){
     // document.getElementById("imOut").src = "images/".concat(Date().toString());
-    if(toggle){
-        document.getElementById("imOut").src = "images/grandmaNo.jpg";
-    } else {
-        document.getElementById("imOut").src = "images/patriarchy.jpg";
+    if(count >59){
+        count = 0;
     }
-    toggle = !toggle
-    timer = setTimeout(startImageFeed, 67);
+    var imgDir = "images/test"+count+".jpg";
+    console.log("Querying " + imgDir);
+    document.getElementById("imOut").src = imgDir;
+    // document.getElementById("imOut").src = "images/grandmaNo.jpg"
+    count++;
+    timer = setTimeout(startImageFeed, 100);
 }
 
 function stopFeed(){

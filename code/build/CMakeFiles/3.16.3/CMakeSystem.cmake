@@ -1,6 +1,6 @@
-set(CMAKE_HOST_SYSTEM "Linux-5.8.0-48-generic")
+set(CMAKE_HOST_SYSTEM "Linux-5.8.0-49-generic")
 set(CMAKE_HOST_SYSTEM_NAME "Linux")
-set(CMAKE_HOST_SYSTEM_VERSION "5.8.0-48-generic")
+set(CMAKE_HOST_SYSTEM_VERSION "5.8.0-49-generic")
 set(CMAKE_HOST_SYSTEM_PROCESSOR "x86_64")
 
 include("/home/roame/Documents/Programming/EDD-Iris/code/Toolchain-rpi.cmake")

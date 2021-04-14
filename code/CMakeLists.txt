@@ -5,4 +5,6 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
 
 Project(Iris)
 
-add_executable(Iris src/main.cpp)
+set(SOURCES src/main.cpp src/ImageCap.cpp include/ImageCap.h)
+add_executable(out ${SOURCES})
+target_include_directories(out PRIVATE "include")

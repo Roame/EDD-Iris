@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/roame/Documents/Programming/EDD-Iris/code/src/main.cpp
+../include/ImageCap.h
 iostream
 -
 stdio.h
@@ -36,5 +36,25 @@ string.h
 fstream
 -
 string
+-
+
+/home/roame/Documents/Programming/EDD-Iris/code/src/ImageCap.cpp
+ImageCap.h
+/home/roame/Documents/Programming/EDD-Iris/code/src/ImageCap.h
+
+/home/roame/Documents/Programming/EDD-Iris/code/src/main.cpp
+fcntl.h
+-
+sys/ioctl.h
+-
+linux/v4l2-common.h
+-
+linux/videodev2.h
+-
+stdio.h
+-
+string.h
+-
+iostream
 -
 
