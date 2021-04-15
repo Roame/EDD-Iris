@@ -57,4 +57,16 @@ string.h
 -
 iostream
 -
+sys/mman.h
+-
+errno.h
+-
+cstdlib
+-
+unistd.h
+-
+fstream
+-
+sstream
+-
 
