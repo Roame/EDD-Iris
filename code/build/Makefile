@@ -123,32 +123,32 @@ out/fast:
 	$(MAKE) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/build
 .PHONY : out/fast
 
-src/ImageCap.o: src/ImageCap.cpp.o
+src/Capture.o: src/Capture.cpp.o
 
-.PHONY : src/ImageCap.o
+.PHONY : src/Capture.o
 
 # target to build an object file
-src/ImageCap.cpp.o:
-	$(MAKE) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/src/ImageCap.cpp.o
-.PHONY : src/ImageCap.cpp.o
+src/Capture.cpp.o:
+	$(MAKE) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/src/Capture.cpp.o
+.PHONY : src/Capture.cpp.o
 
-src/ImageCap.i: src/ImageCap.cpp.i
+src/Capture.i: src/Capture.cpp.i
 
-.PHONY : src/ImageCap.i
+.PHONY : src/Capture.i
 
 # target to preprocess a source file
-src/ImageCap.cpp.i:
-	$(MAKE) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/src/ImageCap.cpp.i
-.PHONY : src/ImageCap.cpp.i
+src/Capture.cpp.i:
+	$(MAKE) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/src/Capture.cpp.i
+.PHONY : src/Capture.cpp.i
 
-src/ImageCap.s: src/ImageCap.cpp.s
+src/Capture.s: src/Capture.cpp.s
 
-.PHONY : src/ImageCap.s
+.PHONY : src/Capture.s
 
 # target to generate assembly for a file
-src/ImageCap.cpp.s:
-	$(MAKE) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/src/ImageCap.cpp.s
-.PHONY : src/ImageCap.cpp.s
+src/Capture.cpp.s:
+	$(MAKE) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/src/Capture.cpp.s
+.PHONY : src/Capture.cpp.s
 
 src/main.o: src/main.cpp.o
 
@@ -186,9 +186,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... out"
-	@echo "... src/ImageCap.o"
-	@echo "... src/ImageCap.i"
-	@echo "... src/ImageCap.s"
+	@echo "... src/Capture.o"
+	@echo "... src/Capture.i"
+	@echo "... src/Capture.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

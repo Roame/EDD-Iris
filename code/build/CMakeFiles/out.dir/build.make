@@ -70,29 +70,29 @@ CMakeFiles/out.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/out.dir/src/main.cpp.s"
 	/home/roame/Documents/Programming/EDD-Iris/code/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/bin/arm-linux-gnueabihf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/roame/Documents/Programming/EDD-Iris/code/src/main.cpp -o CMakeFiles/out.dir/src/main.cpp.s
 
-CMakeFiles/out.dir/src/ImageCap.cpp.o: CMakeFiles/out.dir/flags.make
-CMakeFiles/out.dir/src/ImageCap.cpp.o: ../src/ImageCap.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/roame/Documents/Programming/EDD-Iris/code/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/out.dir/src/ImageCap.cpp.o"
-	/home/roame/Documents/Programming/EDD-Iris/code/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/bin/arm-linux-gnueabihf-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/out.dir/src/ImageCap.cpp.o -c /home/roame/Documents/Programming/EDD-Iris/code/src/ImageCap.cpp
+CMakeFiles/out.dir/src/Capture.cpp.o: CMakeFiles/out.dir/flags.make
+CMakeFiles/out.dir/src/Capture.cpp.o: ../src/Capture.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/roame/Documents/Programming/EDD-Iris/code/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/out.dir/src/Capture.cpp.o"
+	/home/roame/Documents/Programming/EDD-Iris/code/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/bin/arm-linux-gnueabihf-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/out.dir/src/Capture.cpp.o -c /home/roame/Documents/Programming/EDD-Iris/code/src/Capture.cpp
 
-CMakeFiles/out.dir/src/ImageCap.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/out.dir/src/ImageCap.cpp.i"
-	/home/roame/Documents/Programming/EDD-Iris/code/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/bin/arm-linux-gnueabihf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/roame/Documents/Programming/EDD-Iris/code/src/ImageCap.cpp > CMakeFiles/out.dir/src/ImageCap.cpp.i
+CMakeFiles/out.dir/src/Capture.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/out.dir/src/Capture.cpp.i"
+	/home/roame/Documents/Programming/EDD-Iris/code/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/bin/arm-linux-gnueabihf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/roame/Documents/Programming/EDD-Iris/code/src/Capture.cpp > CMakeFiles/out.dir/src/Capture.cpp.i
 
-CMakeFiles/out.dir/src/ImageCap.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/out.dir/src/ImageCap.cpp.s"
-	/home/roame/Documents/Programming/EDD-Iris/code/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/bin/arm-linux-gnueabihf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/roame/Documents/Programming/EDD-Iris/code/src/ImageCap.cpp -o CMakeFiles/out.dir/src/ImageCap.cpp.s
+CMakeFiles/out.dir/src/Capture.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/out.dir/src/Capture.cpp.s"
+	/home/roame/Documents/Programming/EDD-Iris/code/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/bin/arm-linux-gnueabihf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/roame/Documents/Programming/EDD-Iris/code/src/Capture.cpp -o CMakeFiles/out.dir/src/Capture.cpp.s
 
 # Object files for target out
 out_OBJECTS = \
 "CMakeFiles/out.dir/src/main.cpp.o" \
-"CMakeFiles/out.dir/src/ImageCap.cpp.o"
+"CMakeFiles/out.dir/src/Capture.cpp.o"
 
 # External object files for target out
 out_EXTERNAL_OBJECTS =
 
 bin/out: CMakeFiles/out.dir/src/main.cpp.o
-bin/out: CMakeFiles/out.dir/src/ImageCap.cpp.o
+bin/out: CMakeFiles/out.dir/src/Capture.cpp.o
 bin/out: CMakeFiles/out.dir/build.make
 bin/out: CMakeFiles/out.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/roame/Documents/Programming/EDD-Iris/code/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable bin/out"
