@@ -2,16 +2,9 @@ var timer;
 var count = 0;
 
 function startImageFeed(){
-    // document.getElementById("imOut").src = "images/".concat(Date().toString());
-    if(count >59){
-        count = 0;
-    }
-    var imgDir = "images/test"+count+".jpg";
-    console.log("Querying " + imgDir);
+    var imgDir = "images/feed.jpg?t=" + new Date().getTime();
     document.getElementById("imOut").src = imgDir;
-    // document.getElementById("imOut").src = "images/grandmaNo.jpg"
-    count++;
-    timer = setTimeout(startImageFeed, 100);
+    timer = setTimeout(startImageFeed, 200);
 }
 
 function stopFeed(){

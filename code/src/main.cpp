@@ -1,5 +1,5 @@
 #include <iostream>
-#include <sstream>
+#include <chrono>
 
 #include "Capture.h"
 
@@ -9,13 +9,14 @@ int main(){
     Capture cap;
     cap.start();
 
-    for(int i = 0; i < 30; i++){
-        stringstream sstm;
-        sstm << "/home/pi/Iris/web/images/image" << i << ".jpg";
-        cout << "Starting picture " << i << endl;
-        cap.takePicture(sstm.str().c_str());
-        cout << "Done" << endl;
-        usleep(1*1000000);
+    while(true){
+        chrono::steady_clock::time_point begin = chrono::steady_clock::now();
+        cap.takePicture("/home/pi/Iris/web/images/feed.jpg");
+        chrono::steady_clock::time_point end = chrono::steady_clock::now();
+
+        cout    << "Time elapsed: " 
+                << chrono::duration_cast<chrono::milliseconds>(end-begin).count()
+                << " ms" << endl;
     }
     
     cap.stop();

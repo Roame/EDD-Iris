@@ -20,11 +20,21 @@ Capture::Capture(){}
 Capture::~Capture(){}
 
 void Capture::start(){
-    //Attempting to open video device
+    // Attempting to open video device
     fd = open("/dev/video0", O_RDWR);
     assert(fd > 0, "Couldn't open device");
 
-    //Requesting buffers from video device
+    // Negotiating format
+    struct v4l2_format format;
+    format.type = V4L2_BUF_TYPE_VIDEO_CAPTURE;
+    format.fmt.pix.width = 320;
+    format.fmt.pix.height = 240;
+    format.fmt.pix.pixelformat = V4L2_PIX_FMT_JPEG;
+    format.fmt.pix.field = V4L2_FIELD_NONE;
+
+    xioctl("VIDIOC_S_FMT", fd, VIDIOC_S_FMT, &format);
+
+    // Requesting buffers from video device
     struct v4l2_requestbuffers reqbuf;
     memset(&reqbuf, 0, sizeof(reqbuf));
     reqbuf.type = V4L2_BUF_TYPE_VIDEO_CAPTURE;
@@ -60,10 +70,9 @@ void Capture::start(){
 }
 
 void Capture::takePicture(const char* dest){
-    /*We have to clear out the device's internal buffers to get a fresh image.
-    queueing and dequeing 2 times will cycle out these buffers,
-     the third time is the new image. */
-    for(int i = 0; i < 3; i++){
+    /* The camera has two internal buffers. 
+    Cycle 3 times to clear these and get a new image*/
+    for(int i = 0; i < 1; i++){
         xioctl("VIDIOC_QBUF", fd, VIDIOC_QBUF, &bufferinfo);
         xioctl("VIDIOC_DQBUF", fd, VIDIOC_DQBUF, &bufferinfo);
     }

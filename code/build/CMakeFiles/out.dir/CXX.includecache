@@ -39,7 +39,7 @@ Capture.h
 /home/roame/Documents/Programming/EDD-Iris/code/src/main.cpp
 iostream
 -
-sstream
+chrono
 -
 Capture.h
 /home/roame/Documents/Programming/EDD-Iris/code/src/Capture.h
