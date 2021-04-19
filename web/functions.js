@@ -1,15 +1,10 @@
 var timer;
-var toggle = false;
+var count = 0;
 
 function startImageFeed(){
-    // document.getElementById("imOut").src = "images/".concat(Date().toString());
-    if(toggle){
-        document.getElementById("imOut").src = "images/grandmaNo.jpg";
-    } else {
-        document.getElementById("imOut").src = "images/patriarchy.jpg";
-    }
-    toggle = !toggle
-    timer = setTimeout(startImageFeed, 67);
+    var imgDir = "images/feed.jpg?t=" + new Date().getTime();
+    document.getElementById("imOut").src = imgDir;
+    timer = setTimeout(startImageFeed, 200);
 }
 
 function stopFeed(){

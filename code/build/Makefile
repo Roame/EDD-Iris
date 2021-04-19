@@ -111,17 +111,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Iris
+# Target rules for targets named out
 
 # Build rule for target.
-Iris: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Iris
-.PHONY : Iris
+out: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 out
+.PHONY : out
 
 # fast build rule for target.
-Iris/fast:
-	$(MAKE) -f CMakeFiles/Iris.dir/build.make CMakeFiles/Iris.dir/build
-.PHONY : Iris/fast
+out/fast:
+	$(MAKE) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/build
+.PHONY : out/fast
+
+src/Capture.o: src/Capture.cpp.o
+
+.PHONY : src/Capture.o
+
+# target to build an object file
+src/Capture.cpp.o:
+	$(MAKE) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/src/Capture.cpp.o
+.PHONY : src/Capture.cpp.o
+
+src/Capture.i: src/Capture.cpp.i
+
+.PHONY : src/Capture.i
+
+# target to preprocess a source file
+src/Capture.cpp.i:
+	$(MAKE) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/src/Capture.cpp.i
+.PHONY : src/Capture.cpp.i
+
+src/Capture.s: src/Capture.cpp.s
+
+.PHONY : src/Capture.s
+
+# target to generate assembly for a file
+src/Capture.cpp.s:
+	$(MAKE) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/src/Capture.cpp.s
+.PHONY : src/Capture.cpp.s
 
 src/main.o: src/main.cpp.o
 
@@ -129,7 +156,7 @@ src/main.o: src/main.cpp.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) -f CMakeFiles/Iris.dir/build.make CMakeFiles/Iris.dir/src/main.cpp.o
+	$(MAKE) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -138,7 +165,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) -f CMakeFiles/Iris.dir/build.make CMakeFiles/Iris.dir/src/main.cpp.i
+	$(MAKE) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -147,7 +174,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) -f CMakeFiles/Iris.dir/build.make CMakeFiles/Iris.dir/src/main.cpp.s
+	$(MAKE) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 # Help Target
@@ -158,7 +185,10 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... Iris"
+	@echo "... out"
+	@echo "... src/Capture.o"
+	@echo "... src/Capture.i"
+	@echo "... src/Capture.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

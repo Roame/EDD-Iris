@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/Capture.h
+fcntl.h
+-
+sys/ioctl.h
+-
+linux/v4l2-common.h
+-
+linux/videodev2.h
+-
+stdio.h
+-
+string.h
+-
+sys/mman.h
+-
+errno.h
+-
+cstdlib
+-
+unistd.h
+-
+fstream
+-
+iostream
+-
+
+/home/roame/Documents/Programming/EDD-Iris/code/src/Capture.cpp
+Capture.h
+/home/roame/Documents/Programming/EDD-Iris/code/src/Capture.h
+
+/home/roame/Documents/Programming/EDD-Iris/code/src/main.cpp
+iostream
+-
+chrono
+-
+Capture.h
+/home/roame/Documents/Programming/EDD-Iris/code/src/Capture.h
+
