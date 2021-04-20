@@ -31,6 +31,8 @@ fstream
 -
 iostream
 -
+chrono
+-
 
 /home/roame/Documents/Programming/EDD-Iris/code/src/Capture.cpp
 Capture.h

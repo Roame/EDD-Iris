@@ -10,13 +10,15 @@
 #include <unistd.h>
 #include <fstream>
 #include <iostream>
+#include <chrono>
 
 class Capture
 {
 private:
-    int fd;
-    char* buffer;
-    struct v4l2_buffer bufferinfo;
+    int fd, numBuffers = 3, cBuffer = 0;
+    char* buffers[3];
+    struct v4l2_buffer bufferInfos[3];
+    void initBuffers();
 public:
     Capture(/* args */);
     ~Capture();
