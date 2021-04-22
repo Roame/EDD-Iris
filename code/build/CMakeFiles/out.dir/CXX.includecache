@@ -27,16 +27,30 @@ cstdlib
 -
 unistd.h
 -
-fstream
--
 iostream
 -
-chrono
+Matrix.h
+../include/Matrix.h
+
+../include/Matrix.h
+iostream
+-
+vector
+-
+sstream
+-
+iomanip
+-
+string.h
 -
 
 /home/roame/Documents/Programming/EDD-Iris/code/src/Capture.cpp
 Capture.h
 /home/roame/Documents/Programming/EDD-Iris/code/src/Capture.h
+
+/home/roame/Documents/Programming/EDD-Iris/code/src/Matrix.cpp
+Matrix.h
+/home/roame/Documents/Programming/EDD-Iris/code/src/Matrix.h
 
 /home/roame/Documents/Programming/EDD-Iris/code/src/main.cpp
 iostream
@@ -45,4 +59,6 @@ chrono
 -
 Capture.h
 /home/roame/Documents/Programming/EDD-Iris/code/src/Capture.h
+Matrix.h
+/home/roame/Documents/Programming/EDD-Iris/code/src/Matrix.h
 

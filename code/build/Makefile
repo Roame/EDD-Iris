@@ -150,6 +150,33 @@ src/Capture.cpp.s:
 	$(MAKE) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/src/Capture.cpp.s
 .PHONY : src/Capture.cpp.s
 
+src/Matrix.o: src/Matrix.cpp.o
+
+.PHONY : src/Matrix.o
+
+# target to build an object file
+src/Matrix.cpp.o:
+	$(MAKE) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/src/Matrix.cpp.o
+.PHONY : src/Matrix.cpp.o
+
+src/Matrix.i: src/Matrix.cpp.i
+
+.PHONY : src/Matrix.i
+
+# target to preprocess a source file
+src/Matrix.cpp.i:
+	$(MAKE) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/src/Matrix.cpp.i
+.PHONY : src/Matrix.cpp.i
+
+src/Matrix.s: src/Matrix.cpp.s
+
+.PHONY : src/Matrix.s
+
+# target to generate assembly for a file
+src/Matrix.cpp.s:
+	$(MAKE) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/src/Matrix.cpp.s
+.PHONY : src/Matrix.cpp.s
+
 src/main.o: src/main.cpp.o
 
 .PHONY : src/main.o
@@ -189,6 +216,9 @@ help:
 	@echo "... src/Capture.o"
 	@echo "... src/Capture.i"
 	@echo "... src/Capture.s"
+	@echo "... src/Matrix.o"
+	@echo "... src/Matrix.i"
+	@echo "... src/Matrix.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

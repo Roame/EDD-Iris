@@ -1,3 +1,5 @@
+#pragma once
+
 #include <fcntl.h>
 #include <sys/ioctl.h>
 #include <linux/v4l2-common.h>
@@ -8,9 +10,8 @@
 #include <errno.h>
 #include <cstdlib>
 #include <unistd.h>
-#include <fstream>
 #include <iostream>
-#include <chrono>
+#include "Matrix.h"
 
 class Capture
 {
@@ -23,7 +24,7 @@ public:
     Capture(/* args */);
     ~Capture();
     void start();
-    void takePicture(const char* dest);
+    Matrix takePicture();
     void stop();
 
 };

@@ -30,7 +30,7 @@ void Capture::start(){
     format.fmt.pix.width = 320;
     format.fmt.pix.height = 240;
     format.fmt.pix.pixelformat = V4L2_PIX_FMT_JPEG;
-    // format.fmt.pix.pixelformat = V4L2_PIX_FMT_RGB32;
+    format.fmt.pix.pixelformat = V4L2_PIX_FMT_RGB24;
     format.fmt.pix.field = V4L2_FIELD_NONE;
 
     xioctl("VIDIOC_S_FMT", fd, VIDIOC_S_FMT, &format);
@@ -52,36 +52,39 @@ void Capture::start(){
     xioctl("VIDIOC_STREAMON", fd, VIDIOC_STREAMON, &type);
 }
 
-void Capture::takePicture(const char* dest){
-    std::chrono::steady_clock::time_point beg;
-    std::chrono::steady_clock::time_point end;
+Matrix Capture::takePicture(){
     /* The camera has two internal buffers. 
     Cycle 3 times to clear these and get a new image*/
     // Place VIDIOC_QBUF after file close to leverage buffer cycling
     xioctl("VIDIOC_QBUF", fd, VIDIOC_QBUF, &bufferInfos[cBuffer]);
-    
-    beg = chrono::steady_clock::now();
     xioctl("VIDIOC_DQBUF", fd, VIDIOC_DQBUF, &bufferInfos[cBuffer]);
-    end = chrono::steady_clock::now();
-    std::cout << "Dequeue time: " << std::chrono::duration_cast<chrono::milliseconds>(end-beg).count() << std::endl;
     
     // Preparing to read from the buffer:
     int remainingBufferSize = bufferInfos[cBuffer].bytesused;
     int bufPos = 0, outMemBlockSize = 0;
     char* outMemBlock = NULL;
-    ofstream outputFile;
-    outputFile.open(dest, ios::binary | ios::out);
+    Matrix output;
 
     // Loop that reads chunks out of the buffer:
     while(remainingBufferSize > 0){
         bufPos += outMemBlockSize;
 
-        outMemBlockSize = 320;
+        outMemBlockSize = 240*320*3;
         outMemBlock = new char[sizeof(char) * outMemBlockSize];
 
         // Reading from memory and writing to image file
         memcpy(outMemBlock, buffers[cBuffer]+bufPos, outMemBlockSize);
-        outputFile.write(outMemBlock,outMemBlockSize);
+        
+        cout << "Converting to float array" << endl;
+        cout << "Allocating memory" << endl;
+        vector<int> dims{240, 320, 3};
+        // vector<float> data(outMemBlockSize*8);
+        cout << "Copying data" << endl;
+        // memcpy(data.data(), &outMemBlock, outMemBlockSize);
+        vector<float> data(outMemBlock, outMemBlock+outMemBlockSize);
+        cout << "Creating Matrix" << endl;
+        output = Matrix(dims, data);
+        cout << "Successful conversion" << endl;
 
         if(outMemBlockSize > remainingBufferSize)
             outMemBlockSize = remainingBufferSize;
@@ -90,13 +93,11 @@ void Capture::takePicture(const char* dest){
 
         delete outMemBlock;
     }
-
-    // Close the image file
-    outputFile.close();
     
     //Incrementing counter to cycle through buffers
     cBuffer++;
     if(cBuffer >= numBuffers) cBuffer = 0;
+    return output;
 }
 
 void Capture::stop(){

@@ -6,6 +6,9 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
 
 Project(Iris)
 
-set(SOURCES src/main.cpp src/Capture.cpp include/Capture.h)
+set(SOURCES src/main.cpp 
+            src/Capture.cpp     include/Capture.h
+            src/Matrix.cpp      include/Matrix.h)
+
 add_executable(out ${SOURCES})
 target_include_directories(out PRIVATE "include")
