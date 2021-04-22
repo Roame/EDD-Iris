@@ -44,6 +44,8 @@ iomanip
 string.h
 -
 
+../include/toojpeg.h
+
 /home/roame/Documents/Programming/EDD-Iris/code/src/Capture.cpp
 Capture.h
 /home/roame/Documents/Programming/EDD-Iris/code/src/Capture.h
@@ -57,8 +59,18 @@ iostream
 -
 chrono
 -
+string.h
+-
+fstream
+-
 Capture.h
 /home/roame/Documents/Programming/EDD-Iris/code/src/Capture.h
 Matrix.h
 /home/roame/Documents/Programming/EDD-Iris/code/src/Matrix.h
+toojpeg.h
+/home/roame/Documents/Programming/EDD-Iris/code/src/toojpeg.h
+
+/home/roame/Documents/Programming/EDD-Iris/code/src/toojpeg.cpp
+toojpeg.h
+/home/roame/Documents/Programming/EDD-Iris/code/src/toojpeg.h
 

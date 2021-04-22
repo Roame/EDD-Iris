@@ -8,7 +8,8 @@ Project(Iris)
 
 set(SOURCES src/main.cpp 
             src/Capture.cpp     include/Capture.h
-            src/Matrix.cpp      include/Matrix.h)
+            src/Matrix.cpp      include/Matrix.h
+            src/toojpeg         include/toojpeg.h)
 
 add_executable(out ${SOURCES})
 target_include_directories(out PRIVATE "include")

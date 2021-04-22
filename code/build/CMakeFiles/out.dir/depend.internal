@@ -11,4 +11,8 @@ CMakeFiles/out.dir/src/Matrix.cpp.o
 CMakeFiles/out.dir/src/main.cpp.o
  ../include/Capture.h
  ../include/Matrix.h
+ ../include/toojpeg.h
  /home/roame/Documents/Programming/EDD-Iris/code/src/main.cpp
+CMakeFiles/out.dir/src/toojpeg.cpp.o
+ ../include/toojpeg.h
+ /home/roame/Documents/Programming/EDD-Iris/code/src/toojpeg.cpp

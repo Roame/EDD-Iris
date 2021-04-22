@@ -10,5 +10,9 @@ CMakeFiles/out.dir/src/Matrix.cpp.o: ../src/Matrix.cpp
 
 CMakeFiles/out.dir/src/main.cpp.o: ../include/Capture.h
 CMakeFiles/out.dir/src/main.cpp.o: ../include/Matrix.h
+CMakeFiles/out.dir/src/main.cpp.o: ../include/toojpeg.h
 CMakeFiles/out.dir/src/main.cpp.o: ../src/main.cpp
+
+CMakeFiles/out.dir/src/toojpeg.cpp.o: ../include/toojpeg.h
+CMakeFiles/out.dir/src/toojpeg.cpp.o: ../src/toojpeg.cpp
 

@@ -15,4 +15,5 @@ public:
     Matrix(std::vector<int> &dimensions, std::vector<float> &data);
     ~Matrix();
     const char* toString();
+    std::vector<float> getData();
 };

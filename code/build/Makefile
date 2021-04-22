@@ -204,6 +204,33 @@ src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/toojpeg.o: src/toojpeg.cpp.o
+
+.PHONY : src/toojpeg.o
+
+# target to build an object file
+src/toojpeg.cpp.o:
+	$(MAKE) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/src/toojpeg.cpp.o
+.PHONY : src/toojpeg.cpp.o
+
+src/toojpeg.i: src/toojpeg.cpp.i
+
+.PHONY : src/toojpeg.i
+
+# target to preprocess a source file
+src/toojpeg.cpp.i:
+	$(MAKE) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/src/toojpeg.cpp.i
+.PHONY : src/toojpeg.cpp.i
+
+src/toojpeg.s: src/toojpeg.cpp.s
+
+.PHONY : src/toojpeg.s
+
+# target to generate assembly for a file
+src/toojpeg.cpp.s:
+	$(MAKE) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/src/toojpeg.cpp.s
+.PHONY : src/toojpeg.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -222,6 +249,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/toojpeg.o"
+	@echo "... src/toojpeg.i"
+	@echo "... src/toojpeg.s"
 .PHONY : help
 
 

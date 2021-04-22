@@ -36,3 +36,7 @@ const char* Matrix::toString(){
     // return sstm.str().c_str();
     return NULL;
 }
+
+vector<float> Matrix::getData(){
+    return data;
+}
