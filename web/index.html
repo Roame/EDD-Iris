@@ -3,34 +3,39 @@
     <head>
         <title>Iris</title>
         
-        <meta http-equiv="Cache-Control" content="no-cache"/>
+        <!-- <meta http-equiv="Cache-Control" content="no-cache"/>
         <meta http-equiv="Pragma" content="no-cache" />
-        <meta http-equiv="Expires" content="0" />
+        <meta http-equiv="Expires" content="0" /> -->
 
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-        <link rel="manifest" href="/site.webmanifest">      
+        <link rel="manifest" href="/site.webmanifest">    
         
         <link rel="stylesheet" href="styles.css">
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="functions.js"></script>
     </head>
     <body>
-        <div class="row">
-            <div class="col-4">&nbsp;</div>
-            <div class="col-4" id="imBlock">
-                <img id="imOut" src="images/feed.jpg" />
-            </div>
-            <div class="col-4">&nbsp;</div>
+        <div class="cf" id="nav">
+            <button id="cTab">Main</button>
+            <a href="settings"><button class="nBtn">Settings</button></a>
+            <a href="about"><button class="nBtn">About</button></a>
         </div>
-        <div class="row">
-            <div class="col-12">
-                <button class="btn">
-                    <a href="images/feed.jpg" download="capture.jpg">
-                    Take Picture
-                    </a>
-                </button>
+        <div class="cf">
+            <div id="feed">
+                <img src="images/feed.jpg" id="videoFeed">
+                <a href="images/feed.jpg" download="capture.jpg"><button id="capBtn">Take Picture</button></a>
+            </div>
+            <div id="controls">
+                <h1 id="cHeader">Controls</h1>
+                <form action="writedata.php">
+                    <label for="input1" id="label1"></label>
+                    <input type="range" min="0" max="100" value="50" class="slider" id="input1">
+                    <label for="input2" id="label2"></label>
+                    <input type="range" min="0" max="100" value="50" class="slider" id="input2">
+                </form>
             </div>
         </div>
     </body>
