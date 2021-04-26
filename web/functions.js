@@ -1,5 +1,6 @@
 var timer;
 var count = 0;
+var cfgSubTimer;
 
 function startImageFeed(){
     var imgDir = "images/feed.jpg?t=" + new Date().getTime();
@@ -11,8 +12,7 @@ function stopFeed(){
     clearTimeout(timer)
 }
 
-$(document).ready(function(){
-    startImageFeed();
+function initUI(){
     var input1 = document.getElementById("input1");
     var label1 = document.getElementById("label1");
     label1.innerHTML = "Input 1 - " + input1.value;
@@ -28,4 +28,25 @@ $(document).ready(function(){
     input2.oninput = function(){
         label2.innerHTML = "Input 2 - " + this.value;
     }
+}
+
+function sendConfig(){
+    let form = $("#configForm");
+
+    $.ajax({
+        type: "post",
+        url: "writeConfig.php",
+        data: form.serialize(),
+        success: function(response){
+            console.log(response);
+        }
+    });
+
+    cfgSubTimer = setTimeout(sendConfig, 333);
+}
+
+$(document).ready(function(){
+    initUI();
+    // startImageFeed();
+    // sendConfig();
 });
