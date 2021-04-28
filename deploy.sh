@@ -2,7 +2,7 @@ WEB_DIR="~/Iris/web"
 EXE_DIR="~/Iris/executables"
 CFG_DIR="~/Iris/web/configs"
 USER="pi"
-IP="192.168.1.69"
+IP="192.168.1.183"
 
 echo "Creating root directory if missing"
 ssh $USER@$IP "mkdir -p ~/Iris"
