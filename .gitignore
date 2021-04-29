@@ -2,3 +2,5 @@
 code/build
 code/build/CMakeFiles/CMakeOutput.log
 code/build/bin/out
+
+!web/configs
