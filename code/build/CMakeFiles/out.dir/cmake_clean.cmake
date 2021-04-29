@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/out.dir/src/Capture.cpp.o"
+  "CMakeFiles/out.dir/src/ConfigManager.cpp.o"
   "CMakeFiles/out.dir/src/Matrix.cpp.o"
   "CMakeFiles/out.dir/src/main.cpp.o"
   "CMakeFiles/out.dir/src/toojpeg.cpp.o"

@@ -150,6 +150,33 @@ src/Capture.cpp.s:
 	$(MAKE) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/src/Capture.cpp.s
 .PHONY : src/Capture.cpp.s
 
+src/ConfigManager.o: src/ConfigManager.cpp.o
+
+.PHONY : src/ConfigManager.o
+
+# target to build an object file
+src/ConfigManager.cpp.o:
+	$(MAKE) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/src/ConfigManager.cpp.o
+.PHONY : src/ConfigManager.cpp.o
+
+src/ConfigManager.i: src/ConfigManager.cpp.i
+
+.PHONY : src/ConfigManager.i
+
+# target to preprocess a source file
+src/ConfigManager.cpp.i:
+	$(MAKE) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/src/ConfigManager.cpp.i
+.PHONY : src/ConfigManager.cpp.i
+
+src/ConfigManager.s: src/ConfigManager.cpp.s
+
+.PHONY : src/ConfigManager.s
+
+# target to generate assembly for a file
+src/ConfigManager.cpp.s:
+	$(MAKE) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/src/ConfigManager.cpp.s
+.PHONY : src/ConfigManager.cpp.s
+
 src/Matrix.o: src/Matrix.cpp.o
 
 .PHONY : src/Matrix.o
@@ -243,6 +270,9 @@ help:
 	@echo "... src/Capture.o"
 	@echo "... src/Capture.i"
 	@echo "... src/Capture.s"
+	@echo "... src/ConfigManager.o"
+	@echo "... src/ConfigManager.i"
+	@echo "... src/ConfigManager.s"
 	@echo "... src/Matrix.o"
 	@echo "... src/Matrix.i"
 	@echo "... src/Matrix.s"

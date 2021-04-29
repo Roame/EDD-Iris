@@ -32,6 +32,14 @@ iostream
 Matrix.h
 ../include/Matrix.h
 
+../include/ConfigManager.h
+fstream
+-
+string
+-
+iostream
+-
+
 ../include/Matrix.h
 iostream
 -
@@ -49,6 +57,10 @@ string.h
 /home/roame/Documents/Programming/EDD-Iris/code/src/Capture.cpp
 Capture.h
 /home/roame/Documents/Programming/EDD-Iris/code/src/Capture.h
+
+/home/roame/Documents/Programming/EDD-Iris/code/src/ConfigManager.cpp
+ConfigManager.h
+/home/roame/Documents/Programming/EDD-Iris/code/src/ConfigManager.h
 
 /home/roame/Documents/Programming/EDD-Iris/code/src/Matrix.cpp
 Matrix.h
@@ -69,6 +81,8 @@ Matrix.h
 /home/roame/Documents/Programming/EDD-Iris/code/src/Matrix.h
 toojpeg.h
 /home/roame/Documents/Programming/EDD-Iris/code/src/toojpeg.h
+ConfigManager.h
+/home/roame/Documents/Programming/EDD-Iris/code/src/ConfigManager.h
 
 /home/roame/Documents/Programming/EDD-Iris/code/src/toojpeg.cpp
 toojpeg.h

@@ -5,11 +5,15 @@ CMakeFiles/out.dir/src/Capture.cpp.o
  ../include/Capture.h
  ../include/Matrix.h
  /home/roame/Documents/Programming/EDD-Iris/code/src/Capture.cpp
+CMakeFiles/out.dir/src/ConfigManager.cpp.o
+ ../include/ConfigManager.h
+ /home/roame/Documents/Programming/EDD-Iris/code/src/ConfigManager.cpp
 CMakeFiles/out.dir/src/Matrix.cpp.o
  ../include/Matrix.h
  /home/roame/Documents/Programming/EDD-Iris/code/src/Matrix.cpp
 CMakeFiles/out.dir/src/main.cpp.o
  ../include/Capture.h
+ ../include/ConfigManager.h
  ../include/Matrix.h
  ../include/toojpeg.h
  /home/roame/Documents/Programming/EDD-Iris/code/src/main.cpp
