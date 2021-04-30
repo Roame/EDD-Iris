@@ -1,8 +1,8 @@
 # Thresholding:
-Hue Min: 1
-Hue Max: 360
+Hue Min: 0
+Hue Max: 359
 Saturation Min: 0
 Saturation Max: 100
 Value Min: 0
-Value Max: 97
+Value Max: 100
 Filter Back: false

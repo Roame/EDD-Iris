@@ -5,10 +5,15 @@
 #include <iostream>
 
 struct config {
-    int hueMin, hueMax,
-        saturationMin, saturationMax,
-        valueMin, valueMax;
-    bool filterBack;
+    bool configFound = false;
+    int hueMin = 0, 
+        hueMax = 0,
+        saturationMin = 0, 
+        saturationMax = 0,
+        valueMin = 0, 
+        valueMax = 0;
+    bool filterBack = false;
+
 };
 
 class ConfigManager

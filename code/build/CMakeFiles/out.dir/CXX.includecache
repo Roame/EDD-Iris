@@ -51,6 +51,8 @@ iomanip
 -
 string.h
 -
+cmath
+-
 
 ../include/toojpeg.h
 

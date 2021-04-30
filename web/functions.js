@@ -48,5 +48,5 @@ function sendConfig(){
 $(document).ready(function(){
     initUI();
     startImageFeed();
-    // sendConfig();
+    sendConfig();
 });

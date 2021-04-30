@@ -6,7 +6,7 @@ int getInt(std::string &inString, int startPos){
 
 bool getBool(std::string &inString, int startPos){
     std::string text = inString.substr(startPos, inString.length()-startPos);
-    if(text == "true") return true;
+    if(text == "on") return true;
     return false;
 }
 
@@ -18,6 +18,7 @@ config ConfigManager::getConfig(const char* location){
     std::ifstream cfgFile(location);
     std::string line;
     if(cfgFile.is_open()){
+        cConfig.configFound = true;
         while(getline(cfgFile, line)){
             for(int i = 0; i < line.length(); i++){
                 if(line[i] == (char) '#') break;
@@ -29,11 +30,13 @@ config ConfigManager::getConfig(const char* location){
                     if(field == "Saturation Max") { cConfig.saturationMax = getInt(line, i+2); break; }
                     if(field == "Value Min") { cConfig.valueMin = getInt(line, i+2); break; }
                     if(field == "Value Max") { cConfig.valueMax = getInt(line, i+2); break; }
-                    if(field == "Filter Back") { cConfig.filterBack = getBool(line, i + 2); break; }
+                    if(field == "Filter Background") { cConfig.filterBack = getBool(line, i + 2); break; }
                     break;
                 }
             }
         }
+    } else {
+        cConfig.configFound = false;
     }
     cfgFile.close();
     return cConfig;
