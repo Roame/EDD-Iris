@@ -2,11 +2,13 @@
 #include <chrono>
 #include <string.h>
 #include <fstream>
+#include <signal.h>
 
 #include "Capture.h"
 #include "Matrix.h"
 #include "toojpeg.h"
 #include "ConfigManager.h"
+#include "PinControl.h"
 
 using namespace std;
 
@@ -26,6 +28,10 @@ void writeData(){
     counter = 0;
 }
 
+Capture cap;
+
+PinControl pctrl;
+
 ConfigManager cfgManager;
 struct config cConfig;
 
@@ -39,6 +45,13 @@ const auto quality      = 90;
 const bool downsample   = false;
 const char* comment;
 
+void interruptCB(int signum){
+    pctrl.stop();
+    cap.stop();
+    cout << endl << "All processes stopped" << endl;
+    exit(signum);
+}
+
 int main(){
     // vector<int> dims{2,2};
     // vector<float> d1{1,2,3.5,4}, d2{1,1,2,1};
@@ -49,13 +62,13 @@ int main(){
     // cout << m3.getData()[2] << endl;
     // cout << m3.getData()[3] << endl;
 
-    Capture cap;
+    signal(SIGINT, interruptCB);
+
     cap.start();
     cap.takePicture();
     while(true){
         cConfig = cfgManager.getConfig("/home/pi/Iris/web/configs/cConfig.txt");
-
-        cout << cConfig.LEDBrightness << endl;
+        pctrl.setCycle((float) cConfig.LEDBrightness/100.0);
 
         chrono::steady_clock::time_point begin = chrono::steady_clock::now();
         Matrix test = cap.takePicture();

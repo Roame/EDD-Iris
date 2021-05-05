@@ -54,6 +54,24 @@ string.h
 cmath
 -
 
+../include/PinControl.h
+errno.h
+-
+fcntl.h
+-
+stdio.h
+-
+stdlib.h
+-
+sys/stat.h
+-
+sys/types.h
+-
+unistd.h
+-
+string
+-
+
 ../include/toojpeg.h
 
 /home/roame/Documents/Programming/EDD-Iris/code/src/Capture.cpp
@@ -68,6 +86,10 @@ ConfigManager.h
 Matrix.h
 /home/roame/Documents/Programming/EDD-Iris/code/src/Matrix.h
 
+/home/roame/Documents/Programming/EDD-Iris/code/src/PinControl.cpp
+PinControl.h
+/home/roame/Documents/Programming/EDD-Iris/code/src/PinControl.h
+
 /home/roame/Documents/Programming/EDD-Iris/code/src/main.cpp
 iostream
 -
@@ -77,6 +99,8 @@ string.h
 -
 fstream
 -
+signal.h
+-
 Capture.h
 /home/roame/Documents/Programming/EDD-Iris/code/src/Capture.h
 Matrix.h
@@ -85,6 +109,8 @@ toojpeg.h
 /home/roame/Documents/Programming/EDD-Iris/code/src/toojpeg.h
 ConfigManager.h
 /home/roame/Documents/Programming/EDD-Iris/code/src/ConfigManager.h
+PinControl.h
+/home/roame/Documents/Programming/EDD-Iris/code/src/PinControl.h
 
 /home/roame/Documents/Programming/EDD-Iris/code/src/toojpeg.cpp
 toojpeg.h

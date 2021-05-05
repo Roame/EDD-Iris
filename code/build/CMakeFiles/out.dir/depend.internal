@@ -11,10 +11,14 @@ CMakeFiles/out.dir/src/ConfigManager.cpp.o
 CMakeFiles/out.dir/src/Matrix.cpp.o
  ../include/Matrix.h
  /home/roame/Documents/Programming/EDD-Iris/code/src/Matrix.cpp
+CMakeFiles/out.dir/src/PinControl.cpp.o
+ ../include/PinControl.h
+ /home/roame/Documents/Programming/EDD-Iris/code/src/PinControl.cpp
 CMakeFiles/out.dir/src/main.cpp.o
  ../include/Capture.h
  ../include/ConfigManager.h
  ../include/Matrix.h
+ ../include/PinControl.h
  ../include/toojpeg.h
  /home/roame/Documents/Programming/EDD-Iris/code/src/main.cpp
 CMakeFiles/out.dir/src/toojpeg.cpp.o

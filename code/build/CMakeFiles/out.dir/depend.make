@@ -11,9 +11,13 @@ CMakeFiles/out.dir/src/ConfigManager.cpp.o: ../src/ConfigManager.cpp
 CMakeFiles/out.dir/src/Matrix.cpp.o: ../include/Matrix.h
 CMakeFiles/out.dir/src/Matrix.cpp.o: ../src/Matrix.cpp
 
+CMakeFiles/out.dir/src/PinControl.cpp.o: ../include/PinControl.h
+CMakeFiles/out.dir/src/PinControl.cpp.o: ../src/PinControl.cpp
+
 CMakeFiles/out.dir/src/main.cpp.o: ../include/Capture.h
 CMakeFiles/out.dir/src/main.cpp.o: ../include/ConfigManager.h
 CMakeFiles/out.dir/src/main.cpp.o: ../include/Matrix.h
+CMakeFiles/out.dir/src/main.cpp.o: ../include/PinControl.h
 CMakeFiles/out.dir/src/main.cpp.o: ../include/toojpeg.h
 CMakeFiles/out.dir/src/main.cpp.o: ../src/main.cpp
 
