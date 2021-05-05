@@ -55,6 +55,8 @@ int main(){
     while(true){
         cConfig = cfgManager.getConfig("/home/pi/Iris/web/configs/cConfig.txt");
 
+        cout << cConfig.LEDBrightness << endl;
+
         chrono::steady_clock::time_point begin = chrono::steady_clock::now();
         Matrix test = cap.takePicture();
 

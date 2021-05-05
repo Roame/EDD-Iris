@@ -31,6 +31,7 @@ config ConfigManager::getConfig(const char* location){
                     if(field == "Value Min") { cConfig.valueMin = getInt(line, i+2); break; }
                     if(field == "Value Max") { cConfig.valueMax = getInt(line, i+2); break; }
                     if(field == "Filter Background") { cConfig.filterBack = getBool(line, i + 2); break; }
+                    if(field == "LED Brightness") { cConfig.LEDBrightness = getInt(line, i+2); break; }
                     break;
                 }
             }

@@ -15,18 +15,10 @@ function stopFeed(){
 function initUI(){
     var input1 = document.getElementById("input1");
     var label1 = document.getElementById("label1");
-    label1.innerHTML = "Input 1 - " + input1.value;
+    label1.innerHTML = "LED Brightness - " + input1.value;
 
     input1.oninput = function(){
-        label1.innerHTML = "Input 1 - " + this.value;
-    }
-
-    var input2 = document.getElementById("input2");
-    var label2 = document.getElementById("label2");
-    label2.innerHTML = "Input 2 - " + input2.value;
-
-    input2.oninput = function(){
-        label2.innerHTML = "Input 2 - " + this.value;
+        label1.innerHTML = "LED Brightness - " + this.value;
     }
 }
 

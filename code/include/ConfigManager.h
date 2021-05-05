@@ -11,7 +11,8 @@ struct config {
         saturationMin = 0, 
         saturationMax = 0,
         valueMin = 0, 
-        valueMax = 0;
+        valueMax = 0,
+        LEDBrightness = 0;
     bool filterBack = false;
 
 };
