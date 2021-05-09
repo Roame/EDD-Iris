@@ -204,6 +204,33 @@ src/Matrix.cpp.s:
 	$(MAKE) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/src/Matrix.cpp.s
 .PHONY : src/Matrix.cpp.s
 
+src/MatrixOps.o: src/MatrixOps.cpp.o
+
+.PHONY : src/MatrixOps.o
+
+# target to build an object file
+src/MatrixOps.cpp.o:
+	$(MAKE) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/src/MatrixOps.cpp.o
+.PHONY : src/MatrixOps.cpp.o
+
+src/MatrixOps.i: src/MatrixOps.cpp.i
+
+.PHONY : src/MatrixOps.i
+
+# target to preprocess a source file
+src/MatrixOps.cpp.i:
+	$(MAKE) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/src/MatrixOps.cpp.i
+.PHONY : src/MatrixOps.cpp.i
+
+src/MatrixOps.s: src/MatrixOps.cpp.s
+
+.PHONY : src/MatrixOps.s
+
+# target to generate assembly for a file
+src/MatrixOps.cpp.s:
+	$(MAKE) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/src/MatrixOps.cpp.s
+.PHONY : src/MatrixOps.cpp.s
+
 src/PinControl.o: src/PinControl.cpp.o
 
 .PHONY : src/PinControl.o
@@ -303,6 +330,9 @@ help:
 	@echo "... src/Matrix.o"
 	@echo "... src/Matrix.i"
 	@echo "... src/Matrix.s"
+	@echo "... src/MatrixOps.o"
+	@echo "... src/MatrixOps.i"
+	@echo "... src/MatrixOps.s"
 	@echo "... src/PinControl.o"
 	@echo "... src/PinControl.i"
 	@echo "... src/PinControl.s"

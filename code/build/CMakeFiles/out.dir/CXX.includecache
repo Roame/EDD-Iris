@@ -54,6 +54,10 @@ string.h
 cmath
 -
 
+../include/MatrixOps.h
+Matrix.h
+../include/Matrix.h
+
 ../include/PinControl.h
 errno.h
 -
@@ -86,6 +90,10 @@ ConfigManager.h
 Matrix.h
 /home/roame/Documents/Programming/EDD-Iris/code/src/Matrix.h
 
+/home/roame/Documents/Programming/EDD-Iris/code/src/MatrixOps.cpp
+MatrixOps.h
+/home/roame/Documents/Programming/EDD-Iris/code/src/MatrixOps.h
+
 /home/roame/Documents/Programming/EDD-Iris/code/src/PinControl.cpp
 PinControl.h
 /home/roame/Documents/Programming/EDD-Iris/code/src/PinControl.h
@@ -111,6 +119,8 @@ ConfigManager.h
 /home/roame/Documents/Programming/EDD-Iris/code/src/ConfigManager.h
 PinControl.h
 /home/roame/Documents/Programming/EDD-Iris/code/src/PinControl.h
+MatrixOps.h
+/home/roame/Documents/Programming/EDD-Iris/code/src/MatrixOps.h
 
 /home/roame/Documents/Programming/EDD-Iris/code/src/toojpeg.cpp
 toojpeg.h

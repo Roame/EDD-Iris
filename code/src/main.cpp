@@ -9,6 +9,7 @@
 #include "toojpeg.h"
 #include "ConfigManager.h"
 #include "PinControl.h"
+#include "MatrixOps.h"
 
 using namespace std;
 
@@ -75,17 +76,19 @@ int main(){
 
         if(cConfig.configFound){
             if(cConfig.filterBack){
-                if(cConfig.filterBack != pFilterState){
-                    background = test*(1.0/backMaxCount);
-                    backCount++;
-                } else if(backCount < backMaxCount){
-                    background = background + test * (1.0/backMaxCount); //Averaging
-                    backCount++;
-                } else if(backMaxCount >= backMaxCount){
-                    deltas = test + (background * -1); //Subtraction
-                    mask = Matrix::maskFromDeltas(deltas, 20);
-                    test = Matrix::hadamardProduct(test, mask);
-                }
+                // if(cConfig.filterBack != pFilterState){
+                //     background = test*(1.0/backMaxCount);
+                //     backCount++;
+                // } else if(backCount < backMaxCount){
+                //     background = background + test * (1.0/backMaxCount); //Averaging
+                //     backCount++;
+                // } else if(backMaxCount >= backMaxCount){
+                //     deltas = test + (background * -1); //Subtraction
+                //     mask = Matrix::maskFromDeltas(deltas, 20);
+                //     test = Matrix::hadamardProduct(test, mask);
+                // }
+                Matrix edges = MatrixOps::edgeDetect(test);
+                test = MatrixOps::applyMask(test, edges);
             } else {
                 if(cConfig.filterBack != pFilterState){
                     backCount = 0; // Resetting count

@@ -11,7 +11,8 @@ set(SOURCES src/main.cpp
             src/Matrix.cpp          include/Matrix.h
             src/toojpeg             include/toojpeg.h
             src/ConfigManager.cpp   include/ConfigManager.h
-            src/PinControl.cpp      include/PinControl.h)
+            src/PinControl.cpp      include/PinControl.h
+            src/MatrixOps.cpp       include/MatrixOps.h)
 
 add_executable(out ${SOURCES})
 target_include_directories(out PRIVATE "include")
