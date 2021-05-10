@@ -40,6 +40,14 @@ string
 iostream
 -
 
+../include/Draw.h
+iostream
+-
+vector
+-
+Matrix.h
+../include/Matrix.h
+
 ../include/Matrix.h
 iostream
 -
@@ -55,6 +63,14 @@ cmath
 -
 
 ../include/MatrixOps.h
+Matrix.h
+../include/Matrix.h
+
+../include/ObjDetection.h
+iostream
+-
+vector
+-
 Matrix.h
 ../include/Matrix.h
 
@@ -86,6 +102,10 @@ Capture.h
 ConfigManager.h
 /home/roame/Documents/Programming/EDD-Iris/code/src/ConfigManager.h
 
+/home/roame/Documents/Programming/EDD-Iris/code/src/Draw.cpp
+Draw.h
+/home/roame/Documents/Programming/EDD-Iris/code/src/Draw.h
+
 /home/roame/Documents/Programming/EDD-Iris/code/src/Matrix.cpp
 Matrix.h
 /home/roame/Documents/Programming/EDD-Iris/code/src/Matrix.h
@@ -93,6 +113,10 @@ Matrix.h
 /home/roame/Documents/Programming/EDD-Iris/code/src/MatrixOps.cpp
 MatrixOps.h
 /home/roame/Documents/Programming/EDD-Iris/code/src/MatrixOps.h
+
+/home/roame/Documents/Programming/EDD-Iris/code/src/ObjDetection.cpp
+ObjDetection.h
+/home/roame/Documents/Programming/EDD-Iris/code/src/ObjDetection.h
 
 /home/roame/Documents/Programming/EDD-Iris/code/src/PinControl.cpp
 PinControl.h
@@ -121,6 +145,10 @@ PinControl.h
 /home/roame/Documents/Programming/EDD-Iris/code/src/PinControl.h
 MatrixOps.h
 /home/roame/Documents/Programming/EDD-Iris/code/src/MatrixOps.h
+ObjDetection.h
+/home/roame/Documents/Programming/EDD-Iris/code/src/ObjDetection.h
+Draw.h
+/home/roame/Documents/Programming/EDD-Iris/code/src/Draw.h
 
 /home/roame/Documents/Programming/EDD-Iris/code/src/toojpeg.cpp
 toojpeg.h

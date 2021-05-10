@@ -148,6 +148,32 @@ CMakeFiles/out.dir/src/MatrixOps.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/out.dir/src/MatrixOps.cpp.s"
 	/home/roame/Documents/Programming/EDD-Iris/code/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/bin/arm-linux-gnueabihf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/roame/Documents/Programming/EDD-Iris/code/src/MatrixOps.cpp -o CMakeFiles/out.dir/src/MatrixOps.cpp.s
 
+CMakeFiles/out.dir/src/ObjDetection.cpp.o: CMakeFiles/out.dir/flags.make
+CMakeFiles/out.dir/src/ObjDetection.cpp.o: ../src/ObjDetection.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/roame/Documents/Programming/EDD-Iris/code/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/out.dir/src/ObjDetection.cpp.o"
+	/home/roame/Documents/Programming/EDD-Iris/code/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/bin/arm-linux-gnueabihf-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/out.dir/src/ObjDetection.cpp.o -c /home/roame/Documents/Programming/EDD-Iris/code/src/ObjDetection.cpp
+
+CMakeFiles/out.dir/src/ObjDetection.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/out.dir/src/ObjDetection.cpp.i"
+	/home/roame/Documents/Programming/EDD-Iris/code/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/bin/arm-linux-gnueabihf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/roame/Documents/Programming/EDD-Iris/code/src/ObjDetection.cpp > CMakeFiles/out.dir/src/ObjDetection.cpp.i
+
+CMakeFiles/out.dir/src/ObjDetection.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/out.dir/src/ObjDetection.cpp.s"
+	/home/roame/Documents/Programming/EDD-Iris/code/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/bin/arm-linux-gnueabihf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/roame/Documents/Programming/EDD-Iris/code/src/ObjDetection.cpp -o CMakeFiles/out.dir/src/ObjDetection.cpp.s
+
+CMakeFiles/out.dir/src/Draw.cpp.o: CMakeFiles/out.dir/flags.make
+CMakeFiles/out.dir/src/Draw.cpp.o: ../src/Draw.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/roame/Documents/Programming/EDD-Iris/code/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/out.dir/src/Draw.cpp.o"
+	/home/roame/Documents/Programming/EDD-Iris/code/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/bin/arm-linux-gnueabihf-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/out.dir/src/Draw.cpp.o -c /home/roame/Documents/Programming/EDD-Iris/code/src/Draw.cpp
+
+CMakeFiles/out.dir/src/Draw.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/out.dir/src/Draw.cpp.i"
+	/home/roame/Documents/Programming/EDD-Iris/code/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/bin/arm-linux-gnueabihf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/roame/Documents/Programming/EDD-Iris/code/src/Draw.cpp > CMakeFiles/out.dir/src/Draw.cpp.i
+
+CMakeFiles/out.dir/src/Draw.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/out.dir/src/Draw.cpp.s"
+	/home/roame/Documents/Programming/EDD-Iris/code/tools/rpi-tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/bin/arm-linux-gnueabihf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/roame/Documents/Programming/EDD-Iris/code/src/Draw.cpp -o CMakeFiles/out.dir/src/Draw.cpp.s
+
 # Object files for target out
 out_OBJECTS = \
 "CMakeFiles/out.dir/src/main.cpp.o" \
@@ -156,7 +182,9 @@ out_OBJECTS = \
 "CMakeFiles/out.dir/src/toojpeg.cpp.o" \
 "CMakeFiles/out.dir/src/ConfigManager.cpp.o" \
 "CMakeFiles/out.dir/src/PinControl.cpp.o" \
-"CMakeFiles/out.dir/src/MatrixOps.cpp.o"
+"CMakeFiles/out.dir/src/MatrixOps.cpp.o" \
+"CMakeFiles/out.dir/src/ObjDetection.cpp.o" \
+"CMakeFiles/out.dir/src/Draw.cpp.o"
 
 # External object files for target out
 out_EXTERNAL_OBJECTS =
@@ -168,9 +196,11 @@ bin/out: CMakeFiles/out.dir/src/toojpeg.cpp.o
 bin/out: CMakeFiles/out.dir/src/ConfigManager.cpp.o
 bin/out: CMakeFiles/out.dir/src/PinControl.cpp.o
 bin/out: CMakeFiles/out.dir/src/MatrixOps.cpp.o
+bin/out: CMakeFiles/out.dir/src/ObjDetection.cpp.o
+bin/out: CMakeFiles/out.dir/src/Draw.cpp.o
 bin/out: CMakeFiles/out.dir/build.make
 bin/out: CMakeFiles/out.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/roame/Documents/Programming/EDD-Iris/code/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable bin/out"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/roame/Documents/Programming/EDD-Iris/code/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable bin/out"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/out.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

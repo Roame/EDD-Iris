@@ -10,6 +10,8 @@
 #include "ConfigManager.h"
 #include "PinControl.h"
 #include "MatrixOps.h"
+#include "ObjDetection.h"
+#include "Draw.h"
 
 using namespace std;
 
@@ -88,7 +90,12 @@ int main(){
                 //     test = Matrix::hadamardProduct(test, mask);
                 // }
                 Matrix edges = MatrixOps::edgeDetect(test);
-                test = MatrixOps::applyMask(test, edges);
+                vector<float> lines = ObjDetection::getLines(edges, vector<float>());
+                for(int i = 0; i < lines.size()/2; i++){
+                    std::vector<float> line{lines[2*i], lines[2*i+1]};
+                    test = Draw::drawLine(test, line);
+                }
+                // test = MatrixOps::applyMask(test, edges);
             } else {
                 if(cConfig.filterBack != pFilterState){
                     backCount = 0; // Resetting count

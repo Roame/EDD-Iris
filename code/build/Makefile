@@ -177,6 +177,33 @@ src/ConfigManager.cpp.s:
 	$(MAKE) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/src/ConfigManager.cpp.s
 .PHONY : src/ConfigManager.cpp.s
 
+src/Draw.o: src/Draw.cpp.o
+
+.PHONY : src/Draw.o
+
+# target to build an object file
+src/Draw.cpp.o:
+	$(MAKE) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/src/Draw.cpp.o
+.PHONY : src/Draw.cpp.o
+
+src/Draw.i: src/Draw.cpp.i
+
+.PHONY : src/Draw.i
+
+# target to preprocess a source file
+src/Draw.cpp.i:
+	$(MAKE) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/src/Draw.cpp.i
+.PHONY : src/Draw.cpp.i
+
+src/Draw.s: src/Draw.cpp.s
+
+.PHONY : src/Draw.s
+
+# target to generate assembly for a file
+src/Draw.cpp.s:
+	$(MAKE) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/src/Draw.cpp.s
+.PHONY : src/Draw.cpp.s
+
 src/Matrix.o: src/Matrix.cpp.o
 
 .PHONY : src/Matrix.o
@@ -230,6 +257,33 @@ src/MatrixOps.s: src/MatrixOps.cpp.s
 src/MatrixOps.cpp.s:
 	$(MAKE) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/src/MatrixOps.cpp.s
 .PHONY : src/MatrixOps.cpp.s
+
+src/ObjDetection.o: src/ObjDetection.cpp.o
+
+.PHONY : src/ObjDetection.o
+
+# target to build an object file
+src/ObjDetection.cpp.o:
+	$(MAKE) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/src/ObjDetection.cpp.o
+.PHONY : src/ObjDetection.cpp.o
+
+src/ObjDetection.i: src/ObjDetection.cpp.i
+
+.PHONY : src/ObjDetection.i
+
+# target to preprocess a source file
+src/ObjDetection.cpp.i:
+	$(MAKE) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/src/ObjDetection.cpp.i
+.PHONY : src/ObjDetection.cpp.i
+
+src/ObjDetection.s: src/ObjDetection.cpp.s
+
+.PHONY : src/ObjDetection.s
+
+# target to generate assembly for a file
+src/ObjDetection.cpp.s:
+	$(MAKE) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/src/ObjDetection.cpp.s
+.PHONY : src/ObjDetection.cpp.s
 
 src/PinControl.o: src/PinControl.cpp.o
 
@@ -327,12 +381,18 @@ help:
 	@echo "... src/ConfigManager.o"
 	@echo "... src/ConfigManager.i"
 	@echo "... src/ConfigManager.s"
+	@echo "... src/Draw.o"
+	@echo "... src/Draw.i"
+	@echo "... src/Draw.s"
 	@echo "... src/Matrix.o"
 	@echo "... src/Matrix.i"
 	@echo "... src/Matrix.s"
 	@echo "... src/MatrixOps.o"
 	@echo "... src/MatrixOps.i"
 	@echo "... src/MatrixOps.s"
+	@echo "... src/ObjDetection.o"
+	@echo "... src/ObjDetection.i"
+	@echo "... src/ObjDetection.s"
 	@echo "... src/PinControl.o"
 	@echo "... src/PinControl.i"
 	@echo "... src/PinControl.s"

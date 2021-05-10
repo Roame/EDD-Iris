@@ -8,6 +8,10 @@ CMakeFiles/out.dir/src/Capture.cpp.o
 CMakeFiles/out.dir/src/ConfigManager.cpp.o
  ../include/ConfigManager.h
  /home/roame/Documents/Programming/EDD-Iris/code/src/ConfigManager.cpp
+CMakeFiles/out.dir/src/Draw.cpp.o
+ ../include/Draw.h
+ ../include/Matrix.h
+ /home/roame/Documents/Programming/EDD-Iris/code/src/Draw.cpp
 CMakeFiles/out.dir/src/Matrix.cpp.o
  ../include/Matrix.h
  /home/roame/Documents/Programming/EDD-Iris/code/src/Matrix.cpp
@@ -15,14 +19,20 @@ CMakeFiles/out.dir/src/MatrixOps.cpp.o
  ../include/Matrix.h
  ../include/MatrixOps.h
  /home/roame/Documents/Programming/EDD-Iris/code/src/MatrixOps.cpp
+CMakeFiles/out.dir/src/ObjDetection.cpp.o
+ ../include/Matrix.h
+ ../include/ObjDetection.h
+ /home/roame/Documents/Programming/EDD-Iris/code/src/ObjDetection.cpp
 CMakeFiles/out.dir/src/PinControl.cpp.o
  ../include/PinControl.h
  /home/roame/Documents/Programming/EDD-Iris/code/src/PinControl.cpp
 CMakeFiles/out.dir/src/main.cpp.o
  ../include/Capture.h
  ../include/ConfigManager.h
+ ../include/Draw.h
  ../include/Matrix.h
  ../include/MatrixOps.h
+ ../include/ObjDetection.h
  ../include/PinControl.h
  ../include/toojpeg.h
  /home/roame/Documents/Programming/EDD-Iris/code/src/main.cpp

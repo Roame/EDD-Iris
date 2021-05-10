@@ -1,5 +1,6 @@
 #pragma once
 
+#include <iostream>
 #include <vector>
 
 #include "Matrix.h"
@@ -11,5 +12,5 @@ public:
     ObjDetection();
     ~ObjDetection();
 
-    std::vector<float> getLines(Matrix &binaryImg, std::vector<float> knownLines);
+    static std::vector<float> getLines(Matrix &binaryImg, std::vector<float> knownLines);
 };

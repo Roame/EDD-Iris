@@ -12,7 +12,9 @@ set(SOURCES src/main.cpp
             src/toojpeg             include/toojpeg.h
             src/ConfigManager.cpp   include/ConfigManager.h
             src/PinControl.cpp      include/PinControl.h
-            src/MatrixOps.cpp       include/MatrixOps.h)
+            src/MatrixOps.cpp       include/MatrixOps.h
+            src/ObjDetection.cpp    include/ObjDetection.h
+            src/Draw.cpp            include/Draw.h)
 
 add_executable(out ${SOURCES})
 target_include_directories(out PRIVATE "include")
