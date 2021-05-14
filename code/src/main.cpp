@@ -59,28 +59,6 @@ void interruptCB(int signum){
 }
 
 int main(){
-    // vector<int> dims{2,2};
-    // vector<float> d1{1,2,3.5,4}, d2{1,1,2,1};
-    // Matrix m1(dims, d1), m2(dims, d2);
-    // Matrix m3 = m2*0.5f + m1;
-    // cout << m3.getData()[0] << endl;
-    // cout << m3.getData()[1] << endl;
-    // cout << m3.getData()[2] << endl;
-    // cout << m3.getData()[3] << endl;
-
-    // Line filtering test
-    // std::vector<float> test{    1,  1,
-    //                             1,  1.01,
-    //                             2,  1,
-    //                             2.15, 1,
-    //                             1.19, 4.5,
-    //                             -1, 3,
-    //                             -1, 4};
-    // test = ObjDetection::getRectLines(4, test);
-    // for(int i = 0; i < test.size()/2; i++){
-    //     std::cout << test[2*i] << " " << test[2*i+1] << std::endl;
-    // }
-
     signal(SIGINT, interruptCB);
 
     cap.start();
@@ -129,15 +107,6 @@ int main(){
 
                     std::vector<int> xDists = ObjDetection::getXDistribution(edges);   
                     std::vector<int> yDists = ObjDetection::getYDistribution(edges);
-
-                    // std::vector<int> corners = ObjDetection::getCorners(xDists, yDists, edges);
-
-                    // for(int i = 0; i <corners.size()/2; i++){
-                    //     std::cout << corners[2*i] << " " << corners[2*i+1] << std::endl;
-                    //     pic = Draw::drawPoint(pic, corners[2*i]*2, corners[2*i+1]*2);
-                    //     // pic = Draw::drawPoint(pic, 30, 30);
-                    // }
-                    // std::cout << std::endl;
 
                     std::vector<int> box = ObjDetection::getBox(xDists, yDists);
                     for(int i = 0; i < box.size(); i++){
