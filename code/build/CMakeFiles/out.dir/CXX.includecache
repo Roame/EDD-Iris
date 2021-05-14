@@ -48,6 +48,12 @@ vector
 Matrix.h
 ../include/Matrix.h
 
+../include/FileReader.h
+fstream
+-
+string
+-
+
 ../include/Matrix.h
 iostream
 -
@@ -110,6 +116,10 @@ ConfigManager.h
 Draw.h
 /home/roame/Documents/Programming/EDD-Iris/code/src/Draw.h
 
+/home/roame/Documents/Programming/EDD-Iris/code/src/FileReader.cpp
+FileReader.h
+/home/roame/Documents/Programming/EDD-Iris/code/src/FileReader.h
+
 /home/roame/Documents/Programming/EDD-Iris/code/src/Matrix.cpp
 Matrix.h
 /home/roame/Documents/Programming/EDD-Iris/code/src/Matrix.h
@@ -153,6 +163,8 @@ ObjDetection.h
 /home/roame/Documents/Programming/EDD-Iris/code/src/ObjDetection.h
 Draw.h
 /home/roame/Documents/Programming/EDD-Iris/code/src/Draw.h
+FileReader.h
+/home/roame/Documents/Programming/EDD-Iris/code/src/FileReader.h
 
 /home/roame/Documents/Programming/EDD-Iris/code/src/toojpeg.cpp
 toojpeg.h

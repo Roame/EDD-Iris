@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/out.dir/src/Capture.cpp.o"
   "CMakeFiles/out.dir/src/ConfigManager.cpp.o"
   "CMakeFiles/out.dir/src/Draw.cpp.o"
+  "CMakeFiles/out.dir/src/FileReader.cpp.o"
   "CMakeFiles/out.dir/src/Matrix.cpp.o"
   "CMakeFiles/out.dir/src/MatrixOps.cpp.o"
   "CMakeFiles/out.dir/src/ObjDetection.cpp.o"

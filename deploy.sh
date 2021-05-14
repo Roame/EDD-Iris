@@ -1,6 +1,7 @@
 WEB_DIR="~/Iris/web"
 EXE_DIR="~/Iris/executables"
 CFG_DIR="~/Iris/web/configs"
+IMG_DIR="~/Iris/web/images"
 USER="pi"
 IP="192.168.1.183"
 
@@ -33,5 +34,6 @@ rsync -ae ssh code/build/bin/ $USER@$IP:$EXE_DIR --delete
 
 echo "Adjusting permissions"
 ssh $USER@$IP "chmod -R 777 $CFG_DIR"
+ssh $USER@$IP "chmod -R 777 $IMG_DIR"
 
 echo "Finished deployment"

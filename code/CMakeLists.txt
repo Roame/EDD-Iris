@@ -14,7 +14,8 @@ set(SOURCES src/main.cpp
             src/PinControl.cpp      include/PinControl.h
             src/MatrixOps.cpp       include/MatrixOps.h
             src/ObjDetection.cpp    include/ObjDetection.h
-            src/Draw.cpp            include/Draw.h)
+            src/Draw.cpp            include/Draw.h
+            src/FileReader.cpp      include/FileReader.h)
 
 add_executable(out ${SOURCES})
 target_include_directories(out PRIVATE "include")

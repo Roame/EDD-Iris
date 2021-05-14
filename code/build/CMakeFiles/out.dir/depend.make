@@ -12,6 +12,9 @@ CMakeFiles/out.dir/src/Draw.cpp.o: ../include/Draw.h
 CMakeFiles/out.dir/src/Draw.cpp.o: ../include/Matrix.h
 CMakeFiles/out.dir/src/Draw.cpp.o: ../src/Draw.cpp
 
+CMakeFiles/out.dir/src/FileReader.cpp.o: ../include/FileReader.h
+CMakeFiles/out.dir/src/FileReader.cpp.o: ../src/FileReader.cpp
+
 CMakeFiles/out.dir/src/Matrix.cpp.o: ../include/Matrix.h
 CMakeFiles/out.dir/src/Matrix.cpp.o: ../src/Matrix.cpp
 
@@ -29,6 +32,7 @@ CMakeFiles/out.dir/src/PinControl.cpp.o: ../src/PinControl.cpp
 CMakeFiles/out.dir/src/main.cpp.o: ../include/Capture.h
 CMakeFiles/out.dir/src/main.cpp.o: ../include/ConfigManager.h
 CMakeFiles/out.dir/src/main.cpp.o: ../include/Draw.h
+CMakeFiles/out.dir/src/main.cpp.o: ../include/FileReader.h
 CMakeFiles/out.dir/src/main.cpp.o: ../include/Matrix.h
 CMakeFiles/out.dir/src/main.cpp.o: ../include/MatrixOps.h
 CMakeFiles/out.dir/src/main.cpp.o: ../include/ObjDetection.h

@@ -84,3 +84,23 @@ Matrix MatrixOps::downSample(Matrix &image){
     }
     return Matrix(outDims, outData);
 }
+
+Matrix MatrixOps::cropImage(Matrix &image, int x1, int y1, int x2, int y2){
+    std::vector<int> outDims{y2-y1, x2-x1, 3};
+    std::vector<float> outData(outDims[0]*outDims[1]*3);
+
+    std::vector<int> imgDims = image.getDimensions();
+    std::vector<float> imgData = image.getData();
+
+    for(int i = 0; i < x2-x1; i++){
+        for(int j = 0; j < y2-y1; j++){
+            int imgIndex = 3*(x1+i+(y1+j)*imgDims[1]);
+            int cropIndex = 3*(i+j*outDims[1]);
+
+            outData[cropIndex] = imgData[imgIndex];
+            outData[cropIndex+1] = imgData[imgIndex+1];
+            outData[cropIndex+2] = imgData[imgIndex+2];
+        }
+    }
+    return Matrix(outDims, outData);
+}

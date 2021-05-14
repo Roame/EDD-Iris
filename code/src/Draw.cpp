@@ -1,5 +1,9 @@
 #include "Draw.h"
 
+int rangeClip(int val, int min, int max){
+    val = val > max ? max : val < min ? min : val;
+    return val;
+}
 
 Matrix Draw::drawLine(Matrix &image, std::vector<float> line){
     std::vector<int> dims = image.getDimensions();
@@ -45,10 +49,14 @@ Matrix Draw::drawPoint(Matrix &image, int x, int y){
 }
 
 Matrix Draw::drawBox(Matrix &image, int xLow, int xHigh, int yLow, int yHigh){
+    xLow = rangeClip(xLow, 0, 319);    
+    yLow = rangeClip(yLow, 0, 239);    
+    xHigh = rangeClip(xHigh, 0, 319);
+    yHigh = rangeClip(yHigh, 0, 239);
+
     std::vector<int> dims = image.getDimensions();
     std::vector<float> data = image.getData();
     int r = 66, g = 135, b = 245;
-    int width = xHigh-xLow;
     for(int j = yLow; j <= yHigh; j++){
         if(j == yLow || j == yHigh){
             for(int i = xLow; i <= xHigh; i++){

@@ -26,7 +26,9 @@
         <div class="cf">
             <div id="feed">
                 <img src="images/feed.jpg" id="videoFeed">
-                <a href="images/feed.jpg" download="capture.jpg"><button id="capBtn">Take Picture</button></a>
+                <form id="picForm">
+                    <button id="capBtn" type="button" onclick="triggerCrop()">Take Picture</button>
+                </form>
             </div>
             <div id="controls">
                 <h1 id="cHeader">Controls</h1>

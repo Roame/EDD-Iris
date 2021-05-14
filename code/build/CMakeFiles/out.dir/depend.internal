@@ -12,6 +12,9 @@ CMakeFiles/out.dir/src/Draw.cpp.o
  ../include/Draw.h
  ../include/Matrix.h
  /home/roame/Documents/Programming/EDD-Iris/code/src/Draw.cpp
+CMakeFiles/out.dir/src/FileReader.cpp.o
+ ../include/FileReader.h
+ /home/roame/Documents/Programming/EDD-Iris/code/src/FileReader.cpp
 CMakeFiles/out.dir/src/Matrix.cpp.o
  ../include/Matrix.h
  /home/roame/Documents/Programming/EDD-Iris/code/src/Matrix.cpp
@@ -30,6 +33,7 @@ CMakeFiles/out.dir/src/main.cpp.o
  ../include/Capture.h
  ../include/ConfigManager.h
  ../include/Draw.h
+ ../include/FileReader.h
  ../include/Matrix.h
  ../include/MatrixOps.h
  ../include/ObjDetection.h

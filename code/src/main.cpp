@@ -12,16 +12,23 @@
 #include "MatrixOps.h"
 #include "ObjDetection.h"
 #include "Draw.h"
+#include "FileReader.h"
 
 using namespace std;
 
 ofstream file;
-int counter;
+int counter, capCounter;
 char jpegData[100000];
+char capData[100000];
 
 void myOutput(unsigned char oneByte){
     jpegData[counter] = oneByte;
     counter++;
+}
+
+void capOutput(unsigned char oneByte){
+    capData[capCounter] = oneByte;
+    capCounter++;
 }
 
 void writeData(){
@@ -31,6 +38,13 @@ void writeData(){
     counter = 0;
 }
 
+void writeCapData(){
+    file.open("Iris/web/images/capture.jpg", ios::binary);
+    file.write(capData, sizeof(capData));
+    file.close();
+    capCounter = 0;
+}
+
 Capture cap;
 
 PinControl pctrl;
@@ -38,13 +52,13 @@ PinControl pctrl;
 ConfigManager cfgManager;
 struct config cConfig;
 
+Matrix pic, preview, croppedImg;
 Matrix background, deltas, mask;
+std::vector<int> detectedBox;
 bool pFilterState = false;
 int backCount = 0;
 const int backMaxCount = 5;
 vector<float> knownLines;
-
-
 
 const bool isRGB        = true;
 const auto quality      = 90;
@@ -64,11 +78,16 @@ int main(){
     cap.start();
     cap.takePicture();
     while(true){
+        // Regulating capture
+        int capVal = FileReader::getInt("/home/pi/Iris/web/configs/startCap.txt");
+        if(capVal == 1)FileReader::setInt("/home/pi/Iris/web/configs/startCap.txt", 0);
+        
         cConfig = cfgManager.getConfig("/home/pi/Iris/web/configs/cConfig.txt");
         pctrl.setCycle((float) cConfig.LEDBrightness/100.0);
 
         chrono::steady_clock::time_point begin = chrono::steady_clock::now();
-        Matrix pic = cap.takePicture();
+        pic = cap.takePicture();
+        preview = pic;
 
         if(cConfig.configFound){
             if(cConfig.filterBack){
@@ -108,15 +127,11 @@ int main(){
                     std::vector<int> xDists = ObjDetection::getXDistribution(edges);   
                     std::vector<int> yDists = ObjDetection::getYDistribution(edges);
 
-                    std::vector<int> box = ObjDetection::getBox(xDists, yDists);
-                    for(int i = 0; i < box.size(); i++){
-                        box[i] *= 2;
-                        std::cout << box[i] << " ";
-                    }
-                    std::cout << std::endl;
-                    if(box.size() == 4){
-                        pic = Draw::drawBox(pic, box[0], box[1], box[2], box[3]);
-                        pic = Draw::drawBox(pic, box[0]-1, box[1]+1, box[2]-1, box[3]+1);
+                    detectedBox = ObjDetection::getBox(xDists, yDists);
+                    if(detectedBox.size() == 4){
+                        for(int i = 0; i < detectedBox.size(); i++) detectedBox[i] *= 2;
+                        preview = Draw::drawBox(preview, detectedBox[0], detectedBox[1], detectedBox[2], detectedBox[3]);
+                        preview = Draw::drawBox(preview, detectedBox[0]-1, detectedBox[1]+1, detectedBox[2]-1, detectedBox[3]+1);
                     }
 
                 }
@@ -128,8 +143,36 @@ int main(){
             pFilterState = cConfig.filterBack;
         }
 
+        if(capVal == 1){
+            if(cConfig.filterBack){
+                std::cout << "Ran crop" << std::endl;
+                Matrix croppedImg = MatrixOps::cropImage(pic, detectedBox[0],
+                                                        detectedBox[2],
+                                                        detectedBox[1],
+                                                        detectedBox[3]);
+                vector<float> data = croppedImg.getData();
+                float* vData = data.data();
+                char cData[croppedImg.getData().size()];
+                for(int i = 0; i < sizeof(cData); i++){
+                    cData[i] = static_cast<int>(vData[i]);
+                }
+                TooJpeg::writeJpeg(capOutput, cData, croppedImg.getDimensions()[1], croppedImg.getDimensions()[0], isRGB, quality, downsample, comment);
+                writeCapData();
+            } else {
+                std::cout << "ran Cap" << std::endl;
+                vector<float> data = pic.getData();
+                float* vData = data.data();
+                char cData[320*240*3];
+                for(int i = 0; i < sizeof(cData); i++){
+                    cData[i] = static_cast<int>(vData[i]);
+                }
+                TooJpeg::writeJpeg(capOutput, cData, 320, 240, isRGB, quality, downsample, comment);
+                writeCapData();
+            }
+        }
+
         //Converting to char array for jpeg compression
-        vector<float> data = pic.getData();
+        vector<float> data = preview.getData();
         float* vData = data.data();
         char cData[320*240*3];
         for(int i = 0; i < sizeof(cData); i++){

@@ -204,6 +204,33 @@ src/Draw.cpp.s:
 	$(MAKE) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/src/Draw.cpp.s
 .PHONY : src/Draw.cpp.s
 
+src/FileReader.o: src/FileReader.cpp.o
+
+.PHONY : src/FileReader.o
+
+# target to build an object file
+src/FileReader.cpp.o:
+	$(MAKE) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/src/FileReader.cpp.o
+.PHONY : src/FileReader.cpp.o
+
+src/FileReader.i: src/FileReader.cpp.i
+
+.PHONY : src/FileReader.i
+
+# target to preprocess a source file
+src/FileReader.cpp.i:
+	$(MAKE) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/src/FileReader.cpp.i
+.PHONY : src/FileReader.cpp.i
+
+src/FileReader.s: src/FileReader.cpp.s
+
+.PHONY : src/FileReader.s
+
+# target to generate assembly for a file
+src/FileReader.cpp.s:
+	$(MAKE) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/src/FileReader.cpp.s
+.PHONY : src/FileReader.cpp.s
+
 src/Matrix.o: src/Matrix.cpp.o
 
 .PHONY : src/Matrix.o
@@ -384,6 +411,9 @@ help:
 	@echo "... src/Draw.o"
 	@echo "... src/Draw.i"
 	@echo "... src/Draw.s"
+	@echo "... src/FileReader.o"
+	@echo "... src/FileReader.i"
+	@echo "... src/FileReader.s"
 	@echo "... src/Matrix.o"
 	@echo "... src/Matrix.i"
 	@echo "... src/Matrix.s"
