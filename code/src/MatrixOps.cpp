@@ -27,7 +27,7 @@ Matrix MatrixOps::edgeDetect(Matrix &rgbImage){
     float pGVal;
     float pBVal;
     bool edge = false;
-    float threshold = 20;
+    float threshold = 30;
 
     // Vertical iteration
     for(int i = 0; i < outDims[1]; i++){
@@ -60,6 +60,26 @@ Matrix MatrixOps::edgeDetect(Matrix &rgbImage){
             pRVal = imageData[index];
             pGVal = imageData[index+1];
             pBVal = imageData[index+2];
+        }
+    }
+    return Matrix(outDims, outData);
+}
+
+Matrix MatrixOps::downSample(Matrix &image){
+    int stride = 2;
+    std::vector<int> dims(image.getDimensions());
+    std::vector<float> data(image.getData());
+
+    std::vector<int> outDims{dims[0]/stride, dims[1]/stride, 3};
+    std::vector<float> outData(outDims[0]*outDims[1]*3);
+    for(int i = 0; i < outDims[1]; i++){
+        for(int j = 0; j < outDims[0]; j++){
+            int outIndex = 3*(i+j*outDims[1]);
+            int index = stride*3*(i+j*dims[1]);
+ 
+            outData[outIndex] = data[index];
+            outData[outIndex+1] = data[index+1];
+            outData[outIndex+2] = data[index+2];
         }
     }
     return Matrix(outDims, outData);

@@ -71,6 +71,10 @@ iostream
 -
 vector
 -
+algorithm
+-
+cmath
+-
 Matrix.h
 ../include/Matrix.h
 

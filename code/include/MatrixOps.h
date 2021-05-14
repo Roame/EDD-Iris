@@ -10,4 +10,5 @@ public:
     ~MatrixOps(){}
     static Matrix applyMask(Matrix &image, Matrix &mask);
     static Matrix edgeDetect(Matrix &rgbImage);
+    static Matrix downSample(Matrix &image);
 };
