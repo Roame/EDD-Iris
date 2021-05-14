@@ -96,36 +96,61 @@ int main(){
             if(cConfig.filterBack){
                 if(cConfig.filterBack != pFilterState){
                     Matrix test = MatrixOps::downSample(pic);
-                    Matrix edges = MatrixOps::edgeDetect(test);
-                    knownLines = ObjDetection::getLines(edges, std::vector<float>());
+                    background = MatrixOps::edgeDetect(test);
                 } else {
                     Matrix test = MatrixOps::downSample(pic);
                     Matrix edges = MatrixOps::edgeDetect(test);
 
-                    std::vector<float> data = pic.getData();
-                    std::vector<int> dims = pic.getDimensions();
+                    std::vector<float> backData = background.getData();
                     std::vector<float> edgeData = edges.getData();
-                    for(int i = 0; i < dims[1]; i++){
-                        for(int j = 0; j < dims[0]; j++){
-                            int index = 3*(i + j*dims[1]);
-                            int indexDown = (i/2+j/2*dims[1]/2);
-                            int val = edgeData[indexDown] == 1 ? 255 : 0;
-                            data[index] = val;
-                            data[index+1] = val;
-                            data[index+2] = val;
+                    for(int i = 0; i < edgeData.size(); i++){
+                        if(backData[i] == 1){
+                            edgeData[i] = 0;
                         }
                     }
-                    pic = Matrix(dims, data);
+                    std::vector<int> edgeDims = edges.getDimensions();
+                    edges = Matrix(edgeDims, edgeData);
 
-                    vector<float> lines = ObjDetection::getLines(edges, knownLines);
-                    // lines = ObjDetection::getRectLines(knownLines.size(), lines);
-                    for(int i = 0; i < lines.size()/2; i++){
-                        std::vector<float> line{lines[2*i], lines[2*i+1]*2};
-                        pic = Draw::drawLine(pic, line);
-                        // std::cout << line[0] << " " << line[1] << std::endl;
+                    // For displaying binary edge data
+                    // std::vector<float> picData = pic.getData();
+                    // std::vector<int> picDims = pic.getDimensions();
+                    // edgeData = edges.getData();
+                    // for(int i = 0; i < picDims[1]; i++){
+                    //     for(int j = 0; j < picDims[0]; j++){
+                    //         int index = 3*(i + j*picDims[1]);
+                    //         int indexDown = (i/2+j/2*picDims[1]/2);
+                    //         int val = edgeData[indexDown] == 1 ? 255 : 0;
+                    //         picData[index] = val;
+                    //         picData[index+1] = val;
+                    //         picData[index+2] = val;
+                    //     }
+                    // }
+                    // pic = Matrix(picDims, picData);
+
+                    std::vector<int> xDists = ObjDetection::getXDistribution(edges);   
+                    std::vector<int> yDists = ObjDetection::getYDistribution(edges);
+
+                    // std::vector<int> corners = ObjDetection::getCorners(xDists, yDists, edges);
+
+                    // for(int i = 0; i <corners.size()/2; i++){
+                    //     std::cout << corners[2*i] << " " << corners[2*i+1] << std::endl;
+                    //     pic = Draw::drawPoint(pic, corners[2*i]*2, corners[2*i+1]*2);
+                    //     // pic = Draw::drawPoint(pic, 30, 30);
+                    // }
+                    // std::cout << std::endl;
+
+                    std::vector<int> box = ObjDetection::getBox(xDists, yDists);
+                    for(int i = 0; i < box.size(); i++){
+                        box[i] *= 2;
+                        std::cout << box[i] << " ";
                     }
+                    std::cout << std::endl;
+                    if(box.size() == 4){
+                        pic = Draw::drawBox(pic, box[0], box[1], box[2], box[3]);
+                        pic = Draw::drawBox(pic, box[0]-1, box[1]+1, box[2]-1, box[3]+1);
+                    }
+
                 }
-                // pic = MatrixOps::applyMask(test, edges);
             } else {
                 if(cConfig.filterBack != pFilterState){
                     backCount = 0; // Resetting count

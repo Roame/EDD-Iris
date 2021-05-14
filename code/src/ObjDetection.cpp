@@ -138,6 +138,193 @@ std::vector<float> ObjDetection::getRectLines(int filterIndex, std::vector<float
     return output;
 }
 
-std::vector<int> ObjDetection::getRectPoints(std::vector<float> lines){
+std::vector<int> ObjDetection::getXDistribution(Matrix &edges){
+    std::vector<int> edgeDims = edges.getDimensions();
+    std::vector<float> edgeData = edges.getData();
 
+    std::vector<int> distVals;
+
+    for(int i = 0; i < edgeDims[1]; i++){
+        int lowY, highY;
+        bool success = false;
+        for(int j = 0; j < edgeDims[0]; j++){
+            int index = i+j*edgeDims[1];
+            if(edgeData[index] == 1){
+                lowY = j;
+                success = true;
+                break;
+            }
+        }
+        if(!success){
+            distVals.push_back(0);
+            continue;
+        }
+        for(int j = edgeDims[0]-1; j >= 0; j--){
+            int index = i+j*edgeDims[1];
+            if(edgeData[index] == 1){
+                highY = j;
+                break;
+            }
+        }
+        distVals.push_back(highY-lowY);
+    }
+    return distVals;
+}
+
+std::vector<int> ObjDetection::getYDistribution(Matrix &edges){
+    std::vector<int> edgeDims = edges.getDimensions();
+    std::vector<float> edgeData = edges.getData();
+
+    std::vector<int> distVals;
+
+    for(int j = 0; j < edgeDims[0]; j++){
+        int lowX, highX;
+        bool success = false;
+        for(int i = 0; i < edgeDims[1]; i++){
+            int index = i+j*edgeDims[1];
+            if(edgeData[index] == 1){
+                lowX = i;
+                success = true;
+                break;
+            }
+        }
+        if(!success){
+            distVals.push_back(0);
+            continue;
+        }
+        for(int i = edgeDims[1]-1; i >= 0; i--){
+            int index = i+j*edgeDims[1];
+            if(edgeData[index] == 1){
+                highX = i;
+                break;
+            }
+        }
+        distVals.push_back(highX-lowX);
+    }
+    return distVals;
+}
+
+std::vector<int> ObjDetection::getCorners(std::vector<int> &distX, std::vector<int> &distY, Matrix &edges){
+    std::vector<int> output;
+    std::vector<int> dims = edges.getDimensions();
+    std::vector<float> data = edges.getData();
+    int plus[] = {
+        0, 0, 0, 1, 1, 0, 0, -1, -1, 0
+    };
+
+    for(int a = 1; a < distX.size(); a++){
+        if(distX[a-1] > 0 && distX[a+1] > 0 && distX[a+1] > 0){
+            output.push_back(a);
+            for(int j = 0; j < dims[0]; j++){
+                int count = 0;
+                for(int k = 0; k < sizeof(plus)/sizeof(int)/2; k++){
+                    int index = (a+plus[2*k])+(j+plus[2*k+1])*dims[1];
+                    if(data[index] == 1){
+                        count++;
+                    }
+                }
+                if(count > 2) {
+                    output.push_back(j);
+                    break;
+                }
+            }
+            break;
+        }
+    }
+
+    for(int a = distX.size()-2; a >= 1; a--){
+        if(distX[a-1] > 0 && distX[a] > 0 && distX[a+1] > 0){
+            output.push_back(a);
+            for(int j = 0; j < dims[0]; j++){
+                int count = 0;
+                for(int k = 0; k < sizeof(plus)/sizeof(int)/2; k++){
+                    int index = (a+plus[2*k])+(j+plus[2*k+1])*dims[1];
+                    if(data[index] == 1){
+                        count++;
+                    }
+                }
+                if(count > 2) {
+                    output.push_back(j);
+                    break;
+                }
+            }
+            break;
+        }
+    }
+
+
+    // For y:
+    for(int a = 1; a < distY.size(); a++){
+        if(distY[a-1] > 0 && distY[a] > 0 && distY[a+1] > 0){
+            for(int i = 0; i < dims[0]; i++){
+                int count = 0;
+                for(int k = 0; k < sizeof(plus)/sizeof(int)/2; k++){
+                    int index = (i+plus[2*k])+(a+plus[2*k+1])*dims[1];
+                    if(data[index] == 1){
+                        count++;
+                    }
+                }
+                if(count > 2) {
+                    output.push_back(i);
+                    break;
+                }
+            }
+            output.push_back(a);
+            break;
+        }
+    }
+
+    for(int a = distY.size()-2; a >= 1; a--){
+        if(distY[a-1] > 0 && distY[a] > 0 && distY[a+1] > 0){
+            for(int i = 0; i < dims[0]; i++){
+                int count = 0;
+                for(int k = 0; k < sizeof(plus)/sizeof(int)/2; k++){
+                    int index = (i+plus[2*k])+(a+plus[2*k+1])*dims[1];
+                    if(data[index] == 1){
+                        count++;
+                    }
+                }
+                if(count > 2) {
+                    output.push_back(i);
+                    break;
+                }
+            }
+            output.push_back(a);
+            break;
+        }
+    }
+    return output;
+}
+
+std::vector<int> ObjDetection::getBox(std::vector<int> &distX, std::vector<int> &distY){
+    std::vector<int> output;
+
+    for(int a = 0; a < distX.size()-2; a++){
+        if(distX[a] > 0 && distX[a+1] > 0 && distX[a+2] > 0){
+            output.push_back(a);
+            break;
+        }
+    }
+
+    for(int a = distX.size()-1; a >= 2; a--){
+        if(distX[a] > 0 && distX[a-1] > 0 && distX[a-2] > 0){
+            output.push_back(a);
+            break;
+        }
+    }
+
+    for(int a = 0; a < distY.size()-2; a++){
+        if(distY[a] > 0 && distY[a+1] > 0 && distY[a+2] > 0){
+            output.push_back(a); 
+            break;  
+        }
+    }
+
+    for(int a = distY.size()-1; a >= 2; a--){
+        if(distY[a] > 0 && distY[a-1] > 0 && distY[a-2] > 0){
+            output.push_back(a);
+            break;
+        }
+    }
+    return output;
 }
