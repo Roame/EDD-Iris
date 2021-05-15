@@ -15,10 +15,10 @@ function stopFeed(){
 function initUI(){
     var input1 = document.getElementById("input1");
     var label1 = document.getElementById("label1");
-    label1.innerHTML = "LED Brightness - " + input1.value;
+    label1.innerHTML = "LED Brightness - " + input1.value + "%";
 
     input1.oninput = function(){
-        label1.innerHTML = "LED Brightness - " + this.value;
+        label1.innerHTML = "LED Brightness - " + this.value + "%";
     }
 }
 

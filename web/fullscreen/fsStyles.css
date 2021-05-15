@@ -1,0 +1,8 @@
+#fsImg {
+    display: block;
+    height: calc(100vh - 41px);
+    width: 90vw;
+    object-fit: contain;
+    margin-left: auto;
+    margin-right: auto;
+}
