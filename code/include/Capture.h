@@ -14,6 +14,9 @@
 
 #include "Matrix.h"
 
+#define IMAGE_WIDTH 320
+#define IMAGE_HEIGHT 240
+
 class Capture
 {
 private:

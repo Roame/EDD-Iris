@@ -27,8 +27,8 @@ void Capture::start(){
     // Negotiating format
     struct v4l2_format format;
     format.type = V4L2_BUF_TYPE_VIDEO_CAPTURE;
-    format.fmt.pix.width = 320;
-    format.fmt.pix.height = 240;
+    format.fmt.pix.width = IMAGE_WIDTH;
+    format.fmt.pix.height = IMAGE_HEIGHT;
     // format.fmt.pix.pixelformat = V4L2_PIX_FMT_JPEG;
     format.fmt.pix.pixelformat = V4L2_PIX_FMT_RGB24;
     format.fmt.pix.field = V4L2_FIELD_NONE;
@@ -69,13 +69,13 @@ Matrix Capture::takePicture(){
     while(remainingBufferSize > 0){
         bufPos += outMemBlockSize;
 
-        outMemBlockSize = 240*320*3;
+        outMemBlockSize = IMAGE_HEIGHT*IMAGE_WIDTH*3;
         outMemBlock = new char[sizeof(char) * outMemBlockSize];
 
         // Reading from memory and writing to image file
         memcpy(outMemBlock, buffers[cBuffer]+bufPos, outMemBlockSize);
         
-        vector<int> dims{240, 320, 3};
+        vector<int> dims{IMAGE_HEIGHT, IMAGE_WIDTH, 3};
         // vector<float> data(outMemBlockSize*8);
         // memcpy(data.data(), &outMemBlock, outMemBlockSize);
         vector<float> data(outMemBlock, outMemBlock+outMemBlockSize);

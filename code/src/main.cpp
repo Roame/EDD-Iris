@@ -162,11 +162,11 @@ int main(){
                 std::cout << "ran Cap" << std::endl;
                 vector<float> data = pic.getData();
                 float* vData = data.data();
-                char cData[320*240*3];
+                char cData[IMAGE_WIDTH*IMAGE_HEIGHT*3];
                 for(int i = 0; i < sizeof(cData); i++){
                     cData[i] = static_cast<int>(vData[i]);
                 }
-                TooJpeg::writeJpeg(capOutput, cData, 320, 240, isRGB, quality, downsample, comment);
+                TooJpeg::writeJpeg(capOutput, cData, IMAGE_WIDTH, IMAGE_HEIGHT, isRGB, quality, downsample, comment);
                 writeCapData();
             }
         }
@@ -174,12 +174,12 @@ int main(){
         //Converting to char array for jpeg compression
         vector<float> data = preview.getData();
         float* vData = data.data();
-        char cData[320*240*3];
+        char cData[IMAGE_WIDTH*IMAGE_HEIGHT*3];
         for(int i = 0; i < sizeof(cData); i++){
             cData[i] = static_cast<int>(vData[i]);
         }
 
-        TooJpeg::writeJpeg(myOutput, cData, 320, 240, isRGB, quality, downsample, comment);
+        TooJpeg::writeJpeg(myOutput, cData, IMAGE_WIDTH, IMAGE_HEIGHT, isRGB, quality, downsample, comment);
         writeData();
         chrono::steady_clock::time_point end = chrono::steady_clock::now();
 
